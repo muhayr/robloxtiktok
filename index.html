@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Robux Generator</title>
+  <link rel="icon" href="https://tr.rbxcdn.com/97b15696b339e8afd80b39eaf955ada3/420/420/Image/Png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style id="page-skin-1" type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@520&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Kumbh Sans", sans-serif;
+        }
+        body {
+            background-color: #f2f4f5;
+            color: #393b3d;
+        }
+        .logo {
+            width: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .logo span {
+            font-weight: 900;
+            margin-right: 18px;
+            font-size: 25px;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #dee1e3;
+            border-bottom: 1px solid #c7cbce;
+            padding: 0 40px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        ul li {
+            margin-left: 30px;
+        }
+        @media (max-width: 373px) {
+            .logo span {
+                display: none;
+            }
+            nav {
+                padding: 0;
+            }
+        }
+        @media (max-width: 442px) {
+            nav {
+                padding: 0 20px;
+            }
+        }
+        @media (max-width: 396px) {
+            nav {
+                padding: 0 10px;
+            }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <span>&#9776;</span>
+            <img alt="Logo" src="https://imgur.com/BlDJdmo.jpeg"/>
+        </div>
+        <ul>
+            <li>Charts</li>
+            <li>Marketplace</li>
+            <li>Robux</li>
+        </ul>
+    </nav>
+
+    <div class="w-screen h-52 md:h-64 relative overflow-hidden shadow-lg mb-10 rounded-none">
+        <img alt="Banner" class="absolute inset-0 w-full h-full object-cover" src="https://i.imgur.com/pnKIeyU.jpeg"/>
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-white text-center px-4">
+                Receive Robux
+            </h1>
+        </div>
+    </div>
+
+    <div class="max-w-xl mx-auto py-10 px-6 text-center">
+        <input class="w-full px-4 py-2 rounded-xl shadow-md mb-4 text-lg border border-gray-300" 
+               id="username" 
+               placeholder="Enter your Roblox username" 
+               type="text"/>
+        <button class="bg-[#272930] text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition mb-6" 
+                id="search-button" 
+                onclick="fetchProfile()">
+            Search
+        </button>
+        
+        <div class="hidden mt-6 text-center" id="profile">
+            <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar"/>
+            <p class="text-xl font-semibold" id="display-name"></p>
+        </div>
+
+        <div class="hidden mt-8" id="resource-section">
+            <p class="block text-lg font-medium mb-4">Select robux amount</p>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
+                     onclick="selectResource(this, 800)">
+                    <img alt="800 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                    <p class="text-xl font-semibold">800</p>
+                </div>
+                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
+                     onclick="selectResource(this, 1700)">
+                    <img alt="1700 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                    <p class="text-xl font-semibold">1,700</p>
+                </div>
+                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
+                     onclick="selectResource(this, 4500)">
+                    <img alt="4500 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                    <p class="text-xl font-semibold">4,500</p>
+                </div>
+                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
+                     onclick="selectResource(this, 10000)">
+                    <img alt="10000 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                    <p class="text-xl font-semibold">10,000</p>
+                </div>
+            </div>
+            <div class="flex justify-center mt-6">
+                <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition" 
+                        id="confirm-button" 
+                        onclick="confirmSelection()">
+                    Confirm
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="loading-overlay">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-white border-dashed rounded-full animate-spin mx-auto mb-4"></div>
+            <p class="text-white text-xl font-semibold animate-pulse">Loading...</p>
+        </div>
+    </div>
+
+    <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="error-modal">
+        <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center">
+            <p class="text-red-600 font-semibold mb-4" id="error-modal-text">Error</p>
+            <button class="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition" 
+                    onclick="closeErrorModal()">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="verify-step">
+        <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center animate-fade-in">
+            <p class="text-lg font-medium mb-4">Complete the verification to receive your robux.</p>
+            <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition" 
+                    onclick="_cy()">
+                Verify
+            </button>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            const errorModal = document.getElementById("error-modal");
+            const errorModalText = document.getElementById("error-modal-text");
+            const loadingOverlay = document.getElementById("loading-overlay");
+            const verifyStep = document.getElementById("verify-step");
+            let selectedResource = null;
+
+            function showError(message) {
+                errorModalText.textContent = message;
+                errorModal.classList.remove("hidden");
+            }
+
+            function closeErrorModal() {
+                errorModal.classList.add("hidden");
+            }
+
+            async function fetchProfile() {
+                const username = document.getElementById("username").value.trim();
+                const profile = document.getElementById("profile");
+                const resourceSection = document.getElementById("resource-section");
+                const confirmButton = document.getElementById("confirm-button");
+                
+                profile.classList.add("hidden");
+                resourceSection.classList.add("hidden");
+                confirmButton.classList.add("hidden");
+                
+                if(!username) {
+                    showError("Please enter a Roblox username");
+                    return;
+                }
+                
+                loadingOverlay.classList.remove("hidden");
+                
+                try {
+                    const res1 = await fetch("https://users.roproxy.com/v1/usernames/users", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ 
+                            usernames: [username], 
+                            excludeBannedUsers: true 
+                        })
+                    });
+
+                    const data1 = await res1.json();
+                    if (!data1.data || data1.data.length === 0) {
+                        throw new Error("User not found");
+                    }
+                    const userId = data1.data[0].id;
+                    const displayName = data1.data[0].displayName;
+                    const res2 = await fetch(
+                        `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userId}&size=150x150&format=Png&isCircular=false`
+                    );
+                    const data2 = await res2.json();
+                    const avatarUrl = data2.data[0].imageUrl;
+                    document.getElementById("avatar").src = avatarUrl;
+                    document.getElementById("display-name").textContent = displayName;
+                    profile.classList.remove("hidden");
+                    resourceSection.classList.remove("hidden");
+                } catch (err) {
+                    showError("User not found. Please check the username and try again.");
+                } finally {
+                    loadingOverlay.classList.add("hidden");
+                }
+            }
+            function selectResource(element, value) {
+                document.querySelectorAll('.resource-option').forEach(item => {
+                    item.classList.remove(
+                        'ring', 
+                        'ring-2', 
+                        'ring-green-500', 
+                        'bg-green-50'
+                    );
+                });
+                
+                // Add selection to clicked option
+                element.classList.add(
+                    'ring', 
+                    'ring-2', 
+                    'ring-green-500', 
+                    'bg-green-50'
+                );
+                
+                selectedResource = value;
+                document.getElementById('confirm-button').classList.remove('hidden');
+            }
+            async function confirmSelection() {
+                if(!selectedResource) {
+                    showError("Please select a Robux amount");
+                    return;
+                }
+                loadingOverlay.classList.remove("hidden");
+                await new Promise(resolve => setTimeout(resolve, 2500));
+                loadingOverlay.classList.add("hidden");
+                verifyStep.classList.remove("hidden");
+            }
+            window.fetchProfile = fetchProfile;
+            window.selectResource = selectResource;
+            window.confirmSelection = confirmSelection;
+            window.closeErrorModal = closeErrorModal;
+        })();
+    </script>
+</body>
+</html>
