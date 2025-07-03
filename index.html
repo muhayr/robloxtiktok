@@ -55,15 +55,14 @@
                                 </div>
 
                                 <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="robux-selection-modal">
-                                    <div class="bg-white p-6 rounded-2xl shadow-xl **max-w-4xl** text-center animate-fade-in"> <div class="mt-6 text-center" id="profile">
+                                    <div class="bg-white p-6 rounded-2xl shadow-xl **max-w-screen-lg** text-center animate-fade-in"> <div class="mt-6 text-center" id="profile">
                                             <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar"/>
                                             <p class="text-xl font-semibold" id="display-name"></p>
                                         </div>
 
                                         <div class="mt-8" id="resource-section">
                                             <p class="block text-lg font-medium mb-4">Select robux amount</p>
-                                            <div class="grid grid-cols-2 gap-4">
-                                                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+                                            <div class="grid **grid-cols-2 md:grid-cols-4** gap-4"> <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
                                                     onclick="selectResource(this, 800)">
                                                     <img alt="800 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
                                                     <p class="text-xl font-semibold">800</p>
@@ -168,7 +167,8 @@
                         </section>
                     </div>
 
-                    <section class="w-11/12 md:w-10/12 lg:w-8/12" itemscope="" itemtype="https://schema.org/FAQPage"> <div class="flex flex-col items-center justify-center md:flex-row">
+                    <section class="w-11/12 md:w-10/12 lg:w-8/12" itemscope="" itemtype="https://schema.org/FAQPage">
+                        <div class="flex flex-col items-center justify-center md:flex-row">
                             <h2 class="mt-5 text-xl font-bold tracking-tight text-white" itemprop="name">FAQ</h2>
                         </div>
                         <div class="grid w-full mx-auto mt-8 divide-y-2 divide-secondary-400">
