@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Robux Generator</title>
-  <link rel="icon" href="https://tr.rbxcdn.com/97b15696b339e8afd80b39eaf955ada3/420/420/Image/Png" type="image/png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style id="page-skin-1" type="text/css">
-        @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@520&display=swap");
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Kumbh Sans", sans-serif;
-        }
-        /*! CSS Used from: https://blx.gg/build/assets/app-7a58cf6f.css */
+<style>
+    /*! CSS Used from: https://blx.gg/build/assets/app-7a58cf6f.css */
 *,:before,:after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scroll-snap-strictness:proximity;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(63 131 248 / .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;}
 *,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb;}
 :before,:after{--tw-content:"";}
-h1{font-size:inherit;font-weight:inherit;}
+html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Heebo,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent;}
+body{margin:0;line-height:inherit;}
+h1,h2,h3{font-size:inherit;font-weight:inherit;}
 a{color:inherit;text-decoration:inherit;}
-h1,p{margin:0;}
+button,input{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0;}
+button{text-transform:none;}
+button{-webkit-appearance:button;background-color:transparent;background-image:none;}
+summary{display:list-item;}
+h1,h2,h3,p{margin:0;}
+ul{list-style:none;margin:0;padding:0;}
+input::placeholder{opacity:1;color:#9ca3af;}
+button{cursor:pointer;}
 :disabled{cursor:default;}
-img{display:block;vertical-align:middle;}
+img,svg{display:block;vertical-align:middle;}
 img{max-width:100%;height:auto;}
+[type=text]{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0;padding:.5rem .75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}
+[type=text]:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#1C64F2;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);border-color:#1c64f2;}
+[type=text]{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0;padding:.5rem .75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}
+[type=text]:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#1C64F2;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);border-color:#1c64f2;}
+input::placeholder{color:#6b7280;opacity:1;}
 .container{width:100%;}
 @media (min-width: 640px){
 .container{max-width:640px;}
@@ -40,142 +45,492 @@ img{max-width:100%;height:auto;}
 @media (min-width: 1536px){
 .container{max-width:1536px;}
 }
+.prose{color:var(--tw-prose-body);max-width:65ch;}
+.prose :where(a):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-links);text-decoration:underline;font-weight:500;}
+.prose{--tw-prose-body:#374151;--tw-prose-headings:#111827;--tw-prose-lead:#4b5563;--tw-prose-links:#111827;--tw-prose-bold:#111827;--tw-prose-counters:#6b7280;--tw-prose-bullets:#d1d5db;--tw-prose-hr:#e5e7eb;--tw-prose-quotes:#111827;--tw-prose-quote-borders:#e5e7eb;--tw-prose-captions:#6b7280;--tw-prose-kbd:#111827;--tw-prose-kbd-shadows:17 24 39;--tw-prose-code:#111827;--tw-prose-pre-code:#e5e7eb;--tw-prose-pre-bg:#1f2937;--tw-prose-th-borders:#d1d5db;--tw-prose-td-borders:#e5e7eb;--tw-prose-invert-body:#d1d5db;--tw-prose-invert-headings:#fff;--tw-prose-invert-lead:#9ca3af;--tw-prose-invert-links:#fff;--tw-prose-invert-bold:#fff;--tw-prose-invert-counters:#9ca3af;--tw-prose-invert-bullets:#4b5563;--tw-prose-invert-hr:#374151;--tw-prose-invert-quotes:#f3f4f6;--tw-prose-invert-quote-borders:#374151;--tw-prose-invert-captions:#9ca3af;--tw-prose-invert-kbd:#fff;--tw-prose-invert-kbd-shadows:255 255 255;--tw-prose-invert-code:#fff;--tw-prose-invert-pre-code:#d1d5db;--tw-prose-invert-pre-bg:rgb(0 0 0 / 50%);--tw-prose-invert-th-borders:#4b5563;--tw-prose-invert-td-borders:#374151;font-size:1rem;line-height:1.75;}
+.prose :where(.prose>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;}
+.prose :where(.prose>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
 .pointer-events-none{pointer-events:none;}
+.fixed{position:fixed;}
 .absolute{position:absolute;}
 .relative{position:relative;}
+.bottom-0{bottom:0;}
+.left-0{left:0;}
+.right-0{right:0;}
+.top-0{top:0;}
+.top-\[-150px\]{top:-150px;}
+.z-10{z-index:10;}
+.z-50{z-index:50;}
+.order-1{order:1;}
+.order-2{order:2;}
+.col-span-1{grid-column:span 1 / span 1;}
+.col-span-2{grid-column:span 2 / span 2;}
+.col-span-full{grid-column:1 / -1;}
+.m-4{margin:1rem;}
+.mx-4{margin-left:1rem;margin-right:1rem;}
 .mx-auto{margin-left:auto;margin-right:auto;}
+.my-4{margin-top:1rem;margin-bottom:1rem;}
+.my-5{margin-top:1.25rem;margin-bottom:1.25rem;}
+.my-\[90px\]{margin-top:90px;margin-bottom:90px;}
+.my-auto{margin-top:auto;margin-bottom:auto;}
+.-mr-1{margin-right:-.25rem;}
+.mb-10{margin-bottom:2.5rem;}
+.mb-2{margin-bottom:.5rem;}
+.mb-4{margin-bottom:1rem;}
+.mb-6{margin-bottom:1.5rem;}
+.mb-\[90px\]{margin-bottom:90px;}
+.ml-2{margin-left:.5rem;}
+.ml-3{margin-left:.75rem;}
+.ml-4{margin-left:1rem;}
 .mr-2{margin-right:.5rem;}
 .mr-auto{margin-right:auto;}
+.mt-16{margin-top:4rem;}
+.mt-3{margin-top:.75rem;}
+.mt-4{margin-top:1rem;}
+.mt-5{margin-top:1.25rem;}
+.mt-6{margin-top:1.5rem;}
+.mt-8{margin-top:2rem;}
+.mt-\[-70px\]{margin-top:-70px;}
+.mt-\[30px\]{margin-top:30px;}
+.mt-\[70px\]{margin-top:70px;}
 .mt-auto{margin-top:auto;}
+.block{display:block;}
 .inline-block{display:inline-block;}
 .flex{display:flex;}
+.grid{display:grid;}
+.hidden{display:none;}
+.aspect-square{aspect-ratio:1 / 1;}
+.h-3{height:.75rem;}
+.h-4{height:1rem;}
+.h-5{height:1.25rem;}
 .h-6{height:1.5rem;}
+.h-\[100vh\]{height:100vh;}
+.h-\[180px\]{height:180px;}
+.h-\[250px\]{height:250px;}
+.h-\[300px\]{height:300px;}
 .h-\[50vh\]{height:50vh;}
+.h-\[55\%\]{height:55%;}
+.h-full{height:100%;}
 .min-h-\[calc\(100vh-100px\)\]{min-height:calc(100vh - 100px);}
+.min-h-screen{min-height:100vh;}
+.w-0{width:0px;}
+.w-10\/12{width:83.333333%;}
+.w-3{width:.75rem;}
+.w-4{width:1rem;}
+.w-44{width:11rem;}
+.w-5{width:1.25rem;}
 .w-6{width:1.5rem;}
+.w-\[100vw\]{width:100vw;}
+.w-\[1px\]{width:1px;}
+.w-\[344px\]{width:344px;}
+.w-\[460px\]{width:460px;}
 .w-full{width:100%;}
+.min-w-0{min-width:0px;}
 .max-w-\[18ch\]{max-width:18ch;}
 .max-w-\[72ch\]{max-width:72ch;}
+.max-w-screen-xl{max-width:1280px;}
+.flex-1{flex:1 1 0%;}
+.shrink-0{flex-shrink:0;}
+.animate-spin{animation:spin 1s linear infinite;}
 .cursor-pointer{cursor:pointer;}
+.list-none{list-style-type:none;}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
 .flex-row{flex-direction:row;}
 .flex-col{flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
+.items-start{align-items:flex-start;}
 .items-center{align-items:center;}
+.items-stretch{align-items:stretch;}
 .justify-start{justify-content:flex-start;}
 .justify-end{justify-content:flex-end;}
+.justify-center{justify-content:center;}
+.justify-between{justify-content:space-between;}
 .justify-around{justify-content:space-around;}
+.gap-1{gap:.25rem;}
+.gap-10{gap:2.5rem;}
+.gap-2{gap:.5rem;}
+.gap-3{gap:.75rem;}
+.gap-4{gap:1rem;}
+.gap-5{gap:1.25rem;}
+.gap-6{gap:1.5rem;}
 .gap-8{gap:2rem;}
+.divide-y-2>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(2px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(2px * var(--tw-divide-y-reverse));}
+.divide-secondary-400>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(38 43 54 / var(--tw-divide-opacity, 1));}
+.overflow-hidden{overflow:hidden;}
 .overflow-x-hidden{overflow-x:hidden;}
+.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rounded{border-radius:.25rem;}
+.rounded-lg{border-radius:.5rem;}
+.rounded-md{border-radius:.375rem;}
+.rounded-sm{border-radius:.125rem;}
+.rounded-xl{border-radius:.75rem;}
+.border{border-width:1px;}
+.border-2{border-width:2px;}
+.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1));}
+.border-primary-500\/50{border-color:#5766e480;}
+.border-secondary-300{--tw-border-opacity:1;border-color:rgb(61 63 82 / var(--tw-border-opacity, 1));}
+.border-secondary-400{--tw-border-opacity:1;border-color:rgb(38 43 54 / var(--tw-border-opacity, 1));}
+.border-secondary-400\/30{border-color:#262b364d;}
+.bg-black\/60{background-color:#0009;}
+.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(104 117 245 / var(--tw-bg-opacity, 1));}
+.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(88 80 236 / var(--tw-bg-opacity, 1));}
+.bg-primary-500\/25{background-color:#5766e440;}
+.bg-secondary-200\/10{background-color:#c6c7c91a;}
+.bg-secondary-400{--tw-bg-opacity:1;background-color:rgb(38 43 54 / var(--tw-bg-opacity, 1));}
+.bg-secondary-500{--tw-bg-opacity:1;background-color:rgb(28 31 44 / var(--tw-bg-opacity, 1));}
+.bg-secondary-500\/60{background-color:#1c1f2c99;}
+.bg-secondary-600{--tw-bg-opacity:1;background-color:rgb(19 22 31 / var(--tw-bg-opacity, 1));}
+.bg-secondary-700{--tw-bg-opacity:1;background-color:rgb(16 18 24 / var(--tw-bg-opacity, 1));}
+.bg-secondary-700\/60{background-color:#10121899;}
+.bg-white\/5{background-color:#ffffff0d;}
 .bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops));}
 .from-primary-400{--tw-gradient-from:#8994EC var(--tw-gradient-from-position);--tw-gradient-to:rgb(137 148 236 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to);}
 .to-primary-600{--tw-gradient-to:#4E5CCD var(--tw-gradient-to-position);}
 .bg-clip-text{-webkit-background-clip:text;background-clip:text;}
+.fill-white{fill:#fff;}
+.fill-white\/5{fill:#ffffff0d;}
+.object-contain{-o-object-fit:contain;object-fit:contain;}
 .object-cover{-o-object-fit:cover;object-fit:cover;}
+.p-2{padding:.5rem;}
+.p-3{padding:.75rem;}
+.p-4{padding:1rem;}
+.p-5{padding:1.25rem;}
+.p-8{padding:2rem;}
 .px-2{padding-left:.5rem;padding-right:.5rem;}
+.px-3{padding-left:.75rem;padding-right:.75rem;}
+.px-4{padding-left:1rem;padding-right:1rem;}
+.px-5{padding-left:1.25rem;padding-right:1.25rem;}
+.py-0\.5{padding-top:.125rem;padding-bottom:.125rem;}
+.py-1{padding-top:.25rem;padding-bottom:.25rem;}
+.py-2{padding-top:.5rem;padding-bottom:.5rem;}
+.py-2\.5{padding-top:.625rem;padding-bottom:.625rem;}
+.py-20{padding-top:5rem;padding-bottom:5rem;}
+.py-4{padding-top:1rem;padding-bottom:1rem;}
+.py-5{padding-top:1.25rem;padding-bottom:1.25rem;}
 .py-6{padding-top:1.5rem;padding-bottom:1.5rem;}
+.py-8{padding-top:2rem;padding-bottom:2rem;}
+.pr-10{padding-right:2.5rem;}
+.text-left{text-align:left;}
 .text-center{text-align:center;}
+.font-sans{font-family:Heebo,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";}
+.text-2xl{font-size:1.5rem;line-height:2rem;}
+.text-3xl{font-size:1.875rem;line-height:2.25rem;}
 .text-4xl{font-size:2.25rem;line-height:2.5rem;}
+.text-base{font-size:1rem;line-height:1.5rem;}
 .text-sm{font-size:.875rem;line-height:1.25rem;}
+.text-xl{font-size:1.25rem;line-height:1.75rem;}
+.text-xs{font-size:.75rem;line-height:1rem;}
 .font-bold{font-weight:700;}
 .font-extrabold{font-weight:800;}
 .font-medium{font-weight:500;}
+.uppercase{text-transform:uppercase;}
+.tracking-tight{letter-spacing:-.025em;}
+.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1));}
+.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1));}
 .text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1));}
+.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));}
 .text-primary-400{--tw-text-opacity:1;color:rgb(137 148 236 / var(--tw-text-opacity, 1));}
+.text-primary-500{--tw-text-opacity:1;color:rgb(87 102 228 / var(--tw-text-opacity, 1));}
 .text-transparent{color:transparent;}
 .text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);}
+.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / .25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);}
+.shadow-primary-500\/10{--tw-shadow-color:rgb(87 102 228 / .1);--tw-shadow:var(--tw-shadow-colored);}
 .drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgb(0 0 0 / .04)) drop-shadow(0 4px 3px rgb(0 0 0 / .1));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}
+.drop-shadow-sm{--tw-drop-shadow:drop-shadow(0 1px 1px rgb(0 0 0 / .05));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}
+.saturate-\[1\.3\]{--tw-saturate:saturate(1.3);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}
+.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);}
+.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);}
+.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;}
+html{scroll-behavior:smooth;}
 section{margin-top:2.5rem;margin-bottom:2.5rem;}
+.primaryButton{border-radius:.375rem;border-width:2px;border-bottom-width:0px;border-color:#d5d9f866;background-image:linear-gradient(to bottom,var(--tw-gradient-stops));--tw-gradient-from:#5766E4 var(--tw-gradient-from-position);--tw-gradient-to:rgb(87 102 228 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to);--tw-gradient-to:#4E5CCD var(--tw-gradient-to-position);padding:.5rem 1rem;transition:transform .3s ease;}
+.primaryButton:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
 .earnButton{border-radius:.375rem;border-width:2px;border-bottom-width:0px;border-color:#bcf0da66;background-image:linear-gradient(to bottom,var(--tw-gradient-stops));--tw-gradient-from:#31C48D var(--tw-gradient-from-position);--tw-gradient-to:rgb(49 196 141 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to);--tw-gradient-to:#0E9F6E var(--tw-gradient-to-position);padding:.75rem 1.5rem;transition:transform .3s ease;}
 .earnButton:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.inputDark{border-color:#c6c7c933;--tw-bg-opacity:1;background-color:rgb(61 63 82 / var(--tw-bg-opacity, 1));--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / .05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);box-shadow:inset 0 2px 9px #0006;}
 #homepage-image{background:radial-gradient(at bottom right,#51578778 0%,#6b7dff00 66%) 110px -20px no-repeat;max-height:76vh;-o-object-position:bottom right;object-position:bottom right;}
+details summary::-webkit-details-marker{display:none;}
+input{color-scheme:dark;}
+.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(88 80 236 / var(--tw-bg-opacity, 1));}
+.hover\:bg-secondary-100\/5:hover{background-color:#e8e9ea0d;}
+.hover\:bg-white\/5:hover{background-color:#ffffff0d;}
+.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+.hover\:underline:hover{text-decoration-line:underline;}
+.focus\:border-primary-500:focus{--tw-border-opacity:1;border-color:rgb(87 102 228 / var(--tw-border-opacity, 1));}
+.focus\:bg-indigo-600:focus{--tw-bg-opacity:1;background-color:rgb(88 80 236 / var(--tw-bg-opacity, 1));}
+.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px;}
+.focus\:ring-primary-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(87 102 228 / var(--tw-ring-opacity, 1));}
+@media (min-width: 640px){
+.sm\:order-1{order:1;}
+.sm\:order-2{order:2;}
+.sm\:col-span-2{grid-column:span 2 / span 2;}
+.sm\:-mr-2{margin-right:-.5rem;}
+.sm\:ml-3{margin-left:.75rem;}
+.sm\:inline-flex{display:inline-flex;}
+.sm\:h-\[240px\]{height:240px;}
+.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem;}
+}
 @media (min-width: 768px){
 .md\:top-\[150px\]{top:150px;}
 .md\:ml-0{margin-left:0;}
+.md\:ml-10{margin-left:2.5rem;}
 .md\:mr-auto{margin-right:auto;}
+.md\:block{display:block;}
+.md\:w-8\/12{width:66.666667%;}
+.md\:max-w-\[75\%\]{max-width:75%;}
+.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.md\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr));}
+.md\:flex-row{flex-direction:row;}
 .md\:items-start{align-items:flex-start;}
 .md\:object-contain{-o-object-fit:contain;object-fit:contain;}
 .md\:px-4{padding-left:1rem;padding-right:1rem;}
+.md\:px-6{padding-left:1.5rem;padding-right:1.5rem;}
 .md\:text-left{text-align:left;}
 }
 @media (min-width: 1024px){
+.lg\:flex{display:flex;}
+.lg\:hidden{display:none;}
 .lg\:h-\[100vh\]{height:100vh;}
+.lg\:w-4\/12{width:33.333333%;}
+.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.lg\:flex-row{flex-direction:row;}
+.lg\:items-center{align-items:center;}
+.lg\:gap-6{gap:1.5rem;}
+.lg\:px-8{padding-left:2rem;padding-right:2rem;}
 .lg\:px-\[56px\]{padding-left:56px;padding-right:56px;}
+.lg\:px-\[64px\]{padding-left:64px;padding-right:64px;}
+.lg\:pl-6{padding-left:1.5rem;}
+.lg\:text-3xl{font-size:1.875rem;line-height:2.25rem;}
+.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem;}
 .lg\:text-6xl{font-size:3.75rem;line-height:1;}
 }
 @media (min-width: 1280px){
+.xl\:h-\[220px\]{height:220px;}
 .xl\:text-\[5rem\]{font-size:5rem;}
 .xl\:text-lg{font-size:1.125rem;line-height:1.75rem;}
 }
-        body {
-            background-color: #13161f;
-            color: #ffffff;
-        }
-        .logo {
-            width: 30px;
-            display: flex;
-            align-items: center;
-        }
-        .logo span {
-            font-weight: 900;
-            margin-right: 18px;
-            font-size: 25px;
-        }
-        nav {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #dee1e3;
-            border-bottom: 1px solid #c7cbce;
-            padding: 0 40px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        ul li {
-            margin-left: 30px;
-        }
-        @media (max-width: 373px) {
-            .logo span {
-                display: none;
-            }
-            nav {
-                padding: 0;
-            }
-        }
-        @media (max-width: 442px) {
-            nav {
-                padding: 0 20px;
-            }
-        }
-        @media (max-width: 396px) {
-            nav {
-                padding: 0 10px;
-            }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+/*! CSS Used from: Embedded */
+[wire\:loading\.inline][wire\:loading\.inline]{display:none;}
+:root{--livewire-progress-bar-color:#2299dd;}
+/*! CSS Used keyframes */
+@keyframes spin{to{transform:rotate(360deg);}}
+/*! CSS Used fontfaces */
+@font-face{font-family:'Heebo';font-style:normal;font-weight:400;font-display:swap;src:url(https://blx.gg/fonts/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:500;font-display:swap;src:url(https://blx.gg/fonts/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:600;font-display:swap;src:url(https://blx.gg/fonts/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:700;font-display:swap;src:url(https://blx.gg/fonts/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+</style>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <span>&#9776;</span>
-            <img alt="Logo" src="https://imgur.com/BlDJdmo.jpeg"/>
-        </div>
-        <ul>
-            <li>Charts</li>
-            <li>Marketplace</li>
-            <li>Robux</li>
-        </ul>
-    </nav>
+<div id="loginModal" class="hidden">
+    <div wire:snapshot="{&quot;data&quot;:{&quot;username&quot;:null,&quot;userId&quot;:null,&quot;avatar&quot;:null,&quot;usernameInput&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;KCBXUPDwEhuTar2q8r7P&quot;,&quot;name&quot;:&quot;login-form-component&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;2c43289f677e0b4cd902ecb6c609e54c08558c79ad02cd111dd8b447e027d9d9&quot;}" wire:effects="[]" wire:id="KCBXUPDwEhuTar2q8r7P" class="h-[100vh] w-[100vw] fixed top-0 left-0 z-50 bg-black/60 flex items-center justify-center" onclick="if (!window.__cfRLUnblockHandlers) return false; closeModalBg()">
+    <div class="bg-secondary-500/60 backdrop-blur-md text-white border border-secondary-400/30 rounded-lg py-8 px-5 relative flex flex-col gap-2 w-[344px] text-center justify-center items-center">
+                    <div>
+                <span class="block text-xl font-bold text-center w-100">What is your username?</span>
+                <span class="block mb-2 text-sm text-gray-400">We will <u class="font-medium text-gray-200">never</u> ask for your password</span>
+            </div>
+            <label class="block font-medium text-sm text-gray-500 w-full text-left" for="robluxusername">
+    Roblox username
+</label>
+            <input class="border-gray-200 focus:border-primary-500 focus:ring-primary-500 rounded-sm w-full inputDark" id="robluxusername" wire:model="usernameInput" type="text">
+                        <button wire:click="initialFetch" class="w-full mt-6 primaryButton justify-center flex items-center">
+            <span wire:loading.remove="" wire:target="initialFetch">Continue</span>
+                <div wire:loading.inline="" wire:target="initialFetch"><div role="status">
+    <svg class="animate-spin w-6 h-6" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
+        <g id="spinnerbg" class="fill-white/5" transform="matrix(1,0,0,1,7.10543e-15,-0.59091)">
+            <path d="M100,50.591C100,78.205 77.614,100.591 50,100.591C22.386,100.591 0,78.205 0,50.591C0,22.977 22.386,0.591 50,0.591C77.614,0.591 100,22.977 100,50.591ZM9.081,50.591C9.081,73.19 27.401,91.509 50,91.509C72.599,91.509 90.919,73.19 90.919,50.591C90.919,27.992 72.599,9.672 50,9.672C27.401,9.672 9.081,27.992 9.081,50.591Z" style="fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,7.10543e-15,-0.59091)">
+            <path d="M93.968,39.041C96.393,38.404 97.862,35.912 97.008,33.554C95.293,28.823 92.871,24.369 89.817,20.348C85.845,15.119 80.883,10.724 75.212,7.413C69.542,4.102 63.275,1.94 56.77,1.051C51.767,0.368 46.698,0.447 41.734,1.279C39.261,1.693 37.813,4.198 38.45,6.623C39.087,9.049 41.569,10.472 44.051,10.107C47.851,9.549 51.719,9.527 55.54,10.049C60.864,10.777 65.993,12.546 70.633,15.255C75.274,17.965 79.335,21.562 82.585,25.841C84.918,28.912 86.8,32.291 88.181,35.876C89.083,38.216 91.542,39.678 93.968,39.041Z" style="fill:url(#_Linear1);fill-rule:nonzero;"></path>
+        </g>
+        <defs>
+            <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(58.9527,0,0,38.5997,38.3001,19.8907)"><stop offset="0" style="stop-color:white;stop-opacity:0"></stop><stop offset="1" style="stop-color:white;stop-opacity:1"></stop></linearGradient>
+        </defs>
+    </svg>
 
-<section class="w-full" id="homepage-section">
+    <span class="sr-only">Loading...</span>
+</div>
+</div>
+            </button>
+            </div>
+    <script type="text/javascript">
+        const modal = document.getElementById('loginModal');
+        const closeModal = () => {
+            modal.classList.add('hidden');
+        }
+
+        const closeModalBg = () => {
+            if (event.target === modal.children[0]) {
+                modal.classList.add('hidden');
+            }
+        }
+    </script>
+</div>
+</div>
+<div class="relative min-h-screen overflow-hidden bg-secondary-600">
+<header class="relative z-50 w-full text-white container px-2 md:px-4 lg:px-[56px] mx-auto py-4 drop-shadow-sm">
+    <nav class="flex justify-between p-2">
+        <div class="flex">
+        <a title="Return to site homepage" class="py-2 text-3xl font-bold" href="https://blx.gg">BLX<span class="text-transparent bg-clip-text bg-gradient-to-br from-primary-400 to-primary-600 saturate-[1.3]">.GG</span></a>
+
+            <ul class="hidden ml-4 text-sm font-medium md:ml-10 lg:flex-row lg:pl-6 lg:items-center lg:gap-6 lg:flex">
+            <li><a title="Get started with earning Robux" class="text-gray-300 transition hover:text-white" href="https://blx.gg/earn">Earn Robux</a></li>
+            <li><a title="Go to rewards and promocodes page" class="text-gray-300 transition hover:text-white" href="https://blx.gg/rewards">Rewards &amp; Promocodes</a></li>
+            <li><a title="Go to event" class="text-gray-300 transition hover:text-white" href="https://blx.gg/claim-rbx">Event</a></li>
+
+            </ul>
+
+            </div>
+        <div class="flex gap-3">
+            <!-- switch language -->
+            <div class="relative hidden sm:inline-flex">
+                <button id="selectLanguageButton-2" data-dropdown-toggle="selectLanguage-2" class="text-white bg-secondary-500 border-secondary-400 border font-medium rounded-lg text-sm px-4 py-2.5 text-center flex items-center" type="button">
+    English
+    <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+</button>
+<div id="selectLanguage-2" class="z-10 hidden border rounded-lg shadow bg-secondary-400 border-secondary-300 w-44" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(888.8px, 86.4px, 0px);" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom">
+    <ul class="py-2 text-sm text-white dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                                        <li>
+                    <a title="Change site language to Español" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/es"> Español</a>
+                </li>
+                                                <li>
+                    <a title="Change site language to Português" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/pt"> Português</a>
+                </li>
+                                                <li>
+                    <a title="Change site language to Deutsch" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/de"> Deutsch</a>
+                </li>
+                                                <li>
+                    <a title="Change site language to Nederlands" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/nl"> Nederlands</a>
+                </li>
+                                                <li>
+                    <a title="Change site language to Français" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/fr"> Français</a>
+                </li>
+                        </ul>
+</div>
+            </div>
+            <!-- end switch language -->
+            <div class="hidden md:block h-[55%] mx-4 my-auto w-[1px] bg-secondary-200/10"></div>
+            <!-- user profile -->
+            <div wire:snapshot="{&quot;data&quot;:{&quot;username&quot;:null,&quot;userId&quot;:null,&quot;avatar&quot;:null,&quot;robux&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;w1kEjpMBKNQyokCwefOM&quot;,&quot;name&quot;:&quot;user-profile&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;2ea2c0332086ccce9dbc7c28d4ee8bdb9bd18cd4dc52aca8eac42614dd6132ef&quot;}" wire:effects="[]" wire:id="w1kEjpMBKNQyokCwefOM" class="flex gap-4">
+            <button onclick="if (!window.__cfRLUnblockHandlers) return false; openModal()" class="primaryButton">Login</button>
+        <script type="text/javascript">
+        const loginModal = document.getElementById('loginModal');
+        const openModal = () => {
+            loginModal.classList.remove('hidden');
+        }
+    </script>
+</div>
+            <!-- end user profile -->
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+<!-- Page Content -->
+    <main class="relative z-10">
+        <div class="fixed bottom-0 left-0 right-0 z-50" x-data="{ open: false }">
+  <div class="flex flex-col justify-between transition-all border bg-secondary-700 border-secondary-400 drop-shadow-sm lg:hidden rounded-xl px-4 py-2 m-4" x-bind:class="open ? 'p-2 m-2' : 'px-4 py-2 m-4'">
+      <div x-show="open" class="relative flex items-center hidden" x-bind:class="open ? 'flex' : 'hidden'" style="display: none;">
+          <div class="flex justify-between w-full">
+              <div class="flex flex-col px-4 mb-6">
+                  <a href="https://blx.gg/rewards" class="flex items-center py-1 text-white rounded">
+                      <span class="text-sm text-gray-200">Rewards &amp; Promocodes</span>
+                  </a>
+
+
+
+                  <a href="https://blx.gg/claim-rbx" class="flex items-center py-1 text-white rounded">
+                      <span class="text-sm text-gray-200">Event</span>
+                  </a>
+              </div>
+              <div class="flex flex-col mb-6">
+                  <button id="selectLanguageButton-55" data-dropdown-toggle="selectLanguage-55" class="text-white bg-secondary-500 border-secondary-400 border font-medium rounded-lg text-sm px-4 py-2.5 text-center flex items-center" type="button">
+    English
+    <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+</button>
+<div id="selectLanguage-55" class="z-10 hidden border rounded-lg shadow bg-secondary-400 border-secondary-300 w-44" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 1010.4px, 0px);" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom">
+    <ul class="py-2 text-sm text-white dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                                        <li>
+                    <a title="Change site language to Español" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/es"> Español</a>
+                </li>
+                                                <li>
+                    <a title="Change site language to Português" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/pt"> Português</a>
+                </li>
+                                                <li>
+                    <a title="Change site language to Deutsch" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/de"> Deutsch</a>
+                </li>
+                                                <li>
+                    <a title="Change site language to Nederlands" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/nl"> Nederlands</a>
+                </li>
+                                                <li>
+                    <a title="Change site language to Français" class="block px-4 py-2 hover:bg-secondary-100/5" href="https://blx.gg/fr"> Français</a>
+                </li>
+                        </ul>
+</div>
+              </div>
+          </div>
+      </div>
+      <div class="flex justify-between">
+          <div class="flex items-center gap-3">
+                                <button onclick="if (!window.__cfRLUnblockHandlers) return false; openModal()" class="text-white primaryButton">Login</button>
+                          </div>
+            <button x-on:click="open = !open" class="flex items-center gap-1 px-3 py-2 text-xs text-white rounded focus:outline-none bg-white/5">
+                <span class="font-bold uppercase">Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"></path>
+                </svg>
+            </button>
+          </div>
+    </div>
+</div>
+        <div x-data="{&quot;show&quot;:true,&quot;style&quot;:&quot;success&quot;,&quot;message&quot;:null}" :class="{ 'bg-indigo-500': style == 'success', 'bg-red-700': style == 'danger', 'bg-gray-500': style != 'success' &amp;&amp; style != 'danger' }" style="display: none;" x-show="show &amp;&amp; message" x-init="
+                document.addEventListener('banner-message', event => {
+                    style = event.detail.style;
+                    message = event.detail.message;
+                    show = true;
+                });
+            " class="bg-indigo-500">
+    <div class="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between flex-wrap">
+            <div class="w-0 flex-1 flex items-center min-w-0">
+                <span class="flex p-2 rounded-lg bg-indigo-600" :class="{ 'bg-indigo-600': style == 'success', 'bg-red-600': style == 'danger' }">
+                    <svg x-show="style == 'success'" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <svg x-show="style == 'danger'" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"></path>
+                    </svg>
+                    <svg x-show="style != 'success' &amp;&amp; style != 'danger'" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path>
+                    </svg>
+                </span>
+
+                <p class="ml-3 font-medium text-sm text-white truncate" x-text="message"></p>
+            </div>
+
+            <div class="shrink-0 sm:ml-3">
+                <button type="button" class="-mr-1 flex p-2 rounded-md focus:outline-none sm:-mr-2 transition hover:bg-indigo-600 focus:bg-indigo-600" :class="{ 'hover:bg-indigo-600 focus:bg-indigo-600': style == 'success', 'hover:bg-red-600 focus:bg-red-600': style == 'danger' }" aria-label="Dismiss" x-on:click="show = false">
+                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="min-h-screen">
+        <div class="relative flex flex-col items-center justify-center w-full my-5">
+            <section class="w-full" id="homepage-section">
     <div class="absolute text-center md:text-left md:top-[150px] flex items-center justify-start w-full">
         <div class="flex flex-col items-center md:items-start container px-2 md:px-4 lg:px-[56px] mx-auto">
             <h1 class="text-4xl font-bold text-white lg:text-6xl xl:text-[5rem] max-w-[18ch]">Earn free <span class="font-extrabold text-primary-400 text-transparent bg-clip-text drop-shadow-lg shadow-blue-500 bg-gradient-to-br from-primary-400 to-primary-600">ROBUX</span> by doing easy tasks</h1>
@@ -183,7 +538,7 @@ section{margin-top:2.5rem;margin-bottom:2.5rem;}
 
             <div class="flex items-center gap-8">
                         <div onclick="if (!window.__cfRLUnblockHandlers) return false; openModal()" class="flex flex-row justify-around inline-block mx-auto mr-auto font-medium text-white cursor-pointer md:ml-0 md:mr-auto text-md xl:text-lg earnButton">
-            <div class="w-6 h-6 mr-2"><img src="/img/rlogo.webp" alt="robux icon"></div>
+            <div class="w-6 h-6 mr-2"><img src="/img/homepage/rlogo.webp" alt="robux icon"></div>
             <div><span>Start earning</span></div>
             </div>
                         <a title="Join our Discord" href="https://discord.gg/yVMKxYJa3X" target="_BLANK" rel="noopener noreferrer" class="font-medium text-white">Join Discord</a>
@@ -192,193 +547,279 @@ section{margin-top:2.5rem;margin-bottom:2.5rem;}
     </div>
     <div class="min-h-[calc(100vh-100px)] relative w-full overflow-x-hidden pointer-events-none flex justify-end">
         <picture class="flex">
-            <source srcset="/img/roblox_kkttjc_c_scalew_677.webp" media="(max-width: 677px)">
-            <source srcset="/img/roblox_kkttjc_c_scalew_863.webp" media="(max-width: 863px)">
-            <source srcset="/img/roblox_kkttjc_c_scalew_1053.webp" media="(max-width: 1053px)">
-            <source srcset="/img/roblox_kkttjc_c_scalew_1200.webp" media="(max-width: 1200px)">
-            <img class="lg:h-[100vh] h-[50vh] object-cover md:object-contain mt-auto w-full" sizes="(max-width: 1200px) 100vw, 1200px" src="/img/roblox_kkttjc_c_scalew_1200.webp" alt="Roblox character sitting on money" id="homepage-image" loading="eager" fetchpriority="high" decoding="async">
+            <source srcset="/img/homepage/roblox_kkttjc_c_scale,w_677.webp" media="(max-width: 677px)">
+            <source srcset="/img/homepage/roblox_kkttjc_c_scale,w_863.webp" media="(max-width: 863px)">
+            <source srcset="/img/homepage/roblox_kkttjc_c_scale,w_1053.webp" media="(max-width: 1053px)">
+            <source srcset="/img/homepage/roblox_kkttjc_c_scale,w_1200.webp" media="(max-width: 1200px)">
+            <img class="lg:h-[100vh] h-[50vh] object-cover md:object-contain mt-auto w-full" sizes="(max-width: 1200px) 100vw, 1200px" src="/img/homepage/roblox_kkttjc_c_scale,w_1200.webp" alt="Roblox character sitting on money" id="homepage-image" loading="eager" fetchpriority="high" decoding="async">
         </picture>
     </div>
 </section>
+            <div id="instructions-wrapper" class="relative w-full mb-[90px] mt-[-70px]">
+                <img class="absolute h-[300px] w-full object-cover top-[-150px] z-1" loading="eager" fetchpriority="high" decoding="async" src="https://blx.gg/img/bg_under_homeimg.webp" alt="decorative shape for section 2 on the homepage">
+                <section class="container lg:px-[64px] w-full flex flex-col items-center px-4 mx-auto text-white relative z-10 mt-[70px]">
+    <h2 class="py-4 text-3xl lg:text-4xl font-bold mb-4">How you can earn free Robux</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-5 items-stretch">
 
-    <div class="max-w-xl mx-auto py-10 px-6 text-center">
-        <input class="w-full px-4 py-2 rounded-xl shadow-md mb-4 text-lg border border-gray-300" 
-               id="username" 
-               placeholder="Enter your Roblox username" 
-               type="text"/>
-        <button class="bg-[#272930] text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition mb-6" 
-                id="search-button" 
-                onclick="fetchProfile()">
-            Search
-        </button>
-        
-        <div class="hidden mt-6 text-center" id="profile">
-            <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar"/>
-            <p class="text-xl font-semibold" id="display-name"></p>
-        </div>
+            <div class="p-4 items-center rounded-lg bg-primary-500/25 border-2 border-primary-500/50 shadow-2xl shadow-primary-500/10 col-span-1 sm:col-span-2 grid-cols-1 sm:grid-cols-3 grid justify-center">
+                <img class="mx-auto h-[250px] object-contain aspect-square col-span-1" loading="lazy" src="https://blx.gg/img/robloxguy-coin.webp" alt="Mini Roblox Character with Robux">
+                <div class="col-span-2">
+                    <h3 class="text-2xl lg:text-3xl font-bold mb-2">Complete easy tasks</h3>
+                    <p class="text-gray-400 text-sm prose">
+        The best way to earn free Robux is by completing easy tasks brought to you by our sponsors. By doing so we will give you Robux which you can withdraw instantly. These tasks consist of playing mobile games or filling in short effortless surveys – it's a breeze!
 
-        <div class="hidden mt-8" id="resource-section">
-            <p class="block text-lg font-medium mb-4">Select robux amount</p>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
-                     onclick="selectResource(this, 800)">
-                    <img alt="800 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                    <p class="text-xl font-semibold">800</p>
-                </div>
-                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
-                     onclick="selectResource(this, 1700)">
-                    <img alt="1700 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                    <p class="text-xl font-semibold">1,700</p>
-                </div>
-                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
-                     onclick="selectResource(this, 4500)">
-                    <img alt="4500 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                    <p class="text-xl font-semibold">4,500</p>
-                </div>
-                <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition" 
-                     onclick="selectResource(this, 10000)">
-                    <img alt="10000 Robux" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                    <p class="text-xl font-semibold">10,000</p>
+    </p>
                 </div>
             </div>
-            <div class="flex justify-center mt-6">
-                <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition" 
-                        id="confirm-button" 
-                        onclick="confirmSelection()">
-                    Confirm
-                </button>
+
+            <div class="p-8 items-start rounded-lg bg-secondary-500 col-span-1 justify-center flex flex-col">
+                <h3 class="text-2xl lg:text-3xl font-bold mb-2">Easily redeem promocodes!</h3>
+                <p class="text-gray-400 text-sm prose">
+        We make earning Robux even easier for you by giving away frequent promocodes. You can <a href="https://blx.gg/rewards" title="Redeem a Robux promocode" class="text-primary-500">redeem promocodes</a> to get some sweet extra Robux for Free!
+    </p>
             </div>
+
+            <div class="p-8 items-start rounded-lg bg-secondary-500 col-span-1 justify-center flex flex-col">
+                <h3 class="text-2xl lg:text-3xl font-bold mb-2">Enjoy even more Rewards!</h3>
+                <p class="text-gray-400 text-sm prose">
+        Besides promocodes we reward active users with level up rewards, community events and many more features we will implement over the coming time!
+    </p>
+            </div>
+
+            <div class="p-8 items-center rounded-lg bg-primary-500/25 border-2 border-primary-500/50 shadow-2xl shadow-primary-500/10 col-span-1 sm:col-span-2 grid-cols-1 sm:grid-cols-2 grid">
+                <div class="order-2 sm:order-1">
+                    <h3 class="text-2xl lg:text-3xl font-bold mb-2">Easily withdraw your Robux</h3>
+                    <p class="text-gray-400 text-sm prose">
+        Once you earned at least 5 or 7 Robux through completing easy tasks, you can withdraw them instantly through private server payouts or game pass payouts. They will appear in your account after Roblox their 3-5 day holding period. After this period you can enjoy your Robux!
+    </p>
+                </div>
+                <img class="w-[460px] h-[180px] sm:h-[240px] xl:h-[220px] object-contain order-1 sm:order-2" loading="lazy" src="https://blx.gg/img/robloxguy-withdraw.webp" alt="Waving Mini Roblox Character">
+            </div>
+
+    </div>
+</section>
+            </div>
+
+            <section class="container lg:px-[64px] w-full flex flex-col items-center px-4 mx-auto text-white relative z-10 my-[90px]">
+                <div class="w-full flex items-center justify-between gap-5">
+                    <h2 class="text-3xl lg:text-4xl font-bold">Blogs, Guides &amp; Chatter</h2>
+                    <a href="https://blx.gg/blog" title="Read all our blogs" class="flex gap-2 text-xs uppercase items-center p-3 rounded hover:bg-white/5 transition">
+                        All blogs
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-span-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-[30px]">
+                                    <a class="w-full flex gap-2 flex-col" href="https://blx.gg/blog/la-mise-a-jour-apprendre-a-gagner-des-reactions" title="La mise à jour Apprendre à gagner des réactions" itemscope="" itemtype="https://schema.org/NewsArticle">
+    <meta itemprop="image" content="http://blx.gg/storage/blogimages/9/conversions/reactionupdate-preview.jpg">
+    <meta itemprop="image" content="http://blx.gg/storage/blogimages/9/conversions/reactionupdate-thumbnail_xl.jpg">
+    <div class="relative h-[250px] w-full">
+        <div class="flex flex-col justify-between relative z-10 p-2 h-full pointer-events-none">
+            <div></div>
+            <span class="text-xs bg-secondary-700/60 backdrop-blur text-white font-bold text-sm p-3 rounded-lg mr-auto items-center flex gap-2" itemprop="datePublished" content="2023-08-20T13:09:24+00:00">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"></path>
+                                        </svg>
+                                        <span>1 year ago</span>
+                                    </span>
+        </div>
+        <img class="rounded-lg object-cover overflow-hidden absolute left-0 top-0 w-full h-full transition" itemprop="image" src="http://blx.gg/storage/blogimages/9/conversions/reactionupdate-preview.jpg" alt="La mise à jour Apprendre à gagner des réactions">
+    </div>
+    <h3 itemprop="headline" class="text-xl font-bold">La mise à jour Apprendre à gagner des réactions</h3>
+    <p class="text-gray-400 text-sm">Nous sommes ravis de vous présenter une autre façon de gagner des Robux sur notre plateforme, en aimant les pages de blog. Nous écrirons du contenu Roblox de haute qualité et serons heureux de publier du contenu communautaire, comme des histoires...</p>
+</a>
+                                </div>
+            </section>
+
+            <section class="w-10/12 md:w-8/12 lg:w-4/12" itemscope="" itemtype="https://schema.org/FAQPage">
+	<div class="flex flex-col items-center justify-center md:flex-row">
+    <h2 class="mt-5 text-xl font-bold tracking-tight text-white" itemprop="name">FAQ</h2>
+	</div>
+	<div class="grid w-full mx-auto mt-8 divide-y-2 divide-secondary-400">
+		<div class="py-5">
+			<details class="group" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<summary class="flex items-center justify-between font-bold list-none cursor-pointer">
+					<span class="text-white hover:underline" itemprop="name">Is this site legit?</span>
+					<span class="transition group-open:rotate-180">
+                        <svg class="text-white" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+				</summary>
+				<p class="mt-3 text-white group-open:animate-fadeIn" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <span itemprop="text">Yes! We have already paid out users and it's a fully automatic system which uses Roblox's their APIs to pay you out.</span>
+                </p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<summary class="flex items-center justify-between font-bold list-none cursor-pointer">
+					<span class="text-white hover:underline" itemprop="name">How does it work?</span>
+					<span class="transition group-open:rotate-180">
+                <svg class="text-white" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+				</summary>
+                <p class="mt-3 text-white group-open:animate-fadeIn" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <span itemprop="text">You complete offers on the website and earn robux which you can instantly withdraw to your account. Every offer completed our partners pay us, we invest a portion of that money into currency for payouts, creating a fair and win-win situation for both parties.</span>
+                </p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<summary class="flex items-center justify-between font-bold list-none cursor-pointer">
+					<span class="text-white hover:underline" itemprop="name">Why can't I see my Robux?</span>
+					<span class="transition group-open:rotate-180">
+                <svg class="text-white" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+				</summary>
+                <p class="mt-3 text-white group-open:animate-fadeIn" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <span itemprop="text">It may take up to 3 to 5 days to see your Robux appear in your account, in some cases even longer. We guarantee to pay you out and in the worst case you can get in touch and we will help you out!</span>
+                </p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<summary class="flex items-center justify-between font-bold list-none cursor-pointer">
+					<span class="text-white hover:underline" itemprop="name">How do I login, do I need my password?</span>
+					<span class="transition group-open:rotate-180">
+                <svg class="text-white" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+				</summary>
+                <p class="mt-3 text-white group-open:animate-fadeIn" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <span itemprop="text">No, we will never ever ask for your password, we only require a username so we can pay you out.</span>
+                </p>
+			</details>
+		</div>
+        </div>
+</section>
+
+            <section class="flex justify-center w-full mt-16 mb-10">
+            <div class="container px-4 md:px-6 lg:px-[64px] w-full">
+                <div class="w-full relative p-5 text-white">
+                    <h2 class="text-2xl font-bold">Now.gg Roblox Guides</h2>
+                    <div class="col-span-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-[30px]">
+                                </div>
+                </div>
+            </div>
+        </section>
         </div>
     </div>
+    </main>
 
-    <div class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="loading-overlay">
-        <div class="text-center">
-            <div class="w-16 h-16 border-4 border-white border-dashed rounded-full animate-spin mx-auto mb-4"></div>
-            <p class="text-white text-xl font-semibold animate-pulse">Loading...</p>
+    <footer class="flex flex-col items-center mx-auto text-white relative bg-secondary-500">
+    <div class="grid grid-cols-2 md:grid-cols-5 container gap-5 px-4 lg:px-[56px] py-20">
+        <div class="col-span-2">
+            <a title="Return to site homepage" class="py-2 text-3xl font-bold text-white" href="https://blx.gg">BLX<span class="text-transparent bg-clip-text bg-gradient-to-br from-primary-400 to-primary-600 saturate-[1.3]">.GG</span></a>
+            <p class="text-gray-500 text-xs mt-4 pr-10 md:max-w-[75%]">BLX.GG strives to build a fun and easy experience of getting free Robux. We do this by rewarding consistent and honest users with a lot of bonuses, promocodes and events.</p>
+            <div class="flex gap-3 my-4">
+    <a href="https://www.tiktok.com/@blxdotgg" target="_blank" rel="noopener noreferrer" class="bg-secondary-400 border border-secondary-300 rounded-lg p-3 fill-white">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg>
+    </a>
+    <a href="https://www.instagram.com/blxdotgg/" target="_blank" rel="noopener noreferrer" class="bg-secondary-400 border border-secondary-300 rounded-lg p-3 fill-white">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+    </a>
+    <a href="https://www.youtube.com/@blx_gg" target="_blank" rel="noopener noreferrer" class="bg-secondary-400 border border-secondary-300 rounded-lg p-3 fill-white">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>
+    </a>
+    <a href="https://discord.gg/yVMKxYJa3X" target="_blank" rel="noopener noreferrer" class="bg-secondary-400 border border-secondary-300 rounded-lg p-3 fill-white">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"></path></svg>
+    </a>
+    <a href="https://twitter.com/blxdotgg" target="_blank" rel="noopener noreferrer" class="bg-secondary-400 border border-secondary-300 rounded-lg p-3 fill-white">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
+    </a>
+</div>
+        </div>
+        <div class="col-span-1 text-sm">
+            <h2 class="font-bold text-base">Ways to Earn Free Robux</h2>
+            <ul class="mt-3 text-gray-300">
+                <li class="py-0.5">
+    <a href="https://blx.gg/earn" class="flex items-center gap-1 hover:text-white transition text-gray-400" title="Go to Earn Robux Through Offerwalls">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+                <span>Earn Robux Through Offerwalls</span>
+    </a>
+</li>
+                <li class="py-0.5">
+    <a href="https://blx.gg/rewards" class="flex items-center gap-1 hover:text-white transition text-gray-400" title="Go to Rewards &amp; Promocodes">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+                <span>Rewards &amp; Promocodes</span>
+    </a>
+</li>
+            </ul>
+        </div>
+        <div class="col-span-1 text-sm">
+            <h2 class="font-bold text-base">Blogs, Guides &amp; Tutorials</h2>
+            <ul class="mt-3 text-gray-300">
+                <li class="py-0.5">
+    <a href="https://blx.gg/blog" class="flex items-center gap-1 hover:text-white transition text-gray-400" title="Go to Blogs">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+                <span>Blogs</span>
+    </a>
+</li>
+                <li class="py-0.5">
+    <a href="https://blx.gg/now-gg-roblox" class="flex items-center gap-1 hover:text-white transition text-gray-400" title="Go to Now.gg Roblox Guides">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+                <span>Now.gg Roblox Guides</span>
+    </a>
+</li>
+            </ul>
+        </div>
+        <div class="col-span-1 text-sm">
+            <h2 class="font-bold text-base">Help &amp; support</h2>
+            <ul class="mt-3 text-gray-300">
+                <li class="py-0.5">
+    <a href="https://blx.gg/help" class="flex items-center gap-1 hover:text-white transition text-gray-400" title="Go to Help center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+                <span>Help center</span>
+    </a>
+</li>
+                <li class="py-0.5">
+    <a href="https://blx.gg/help/earn-free-robux-guide" class="flex items-center gap-1 hover:text-white transition text-gray-400" title="Go to How to earn free robux">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg>
+                <span>How to earn free robux</span>
+    </a>
+</li>
+                <li class="py-0.5">
+    <a href="https://blx.gg/help/missing-robux" class="flex items-center gap-1 hover:text-white transition text-gray-400" title="Go to Missing robux?">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg>
+                <span>Missing robux?</span>
+    </a>
+</li>
+                <li class="py-0.5">
+    <a href="https://blx.gg/help/withdrawing-guide" class="flex items-center gap-1 hover:text-white transition text-gray-400" title="Go to How to withdraw">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg>
+                <span>How to withdraw</span>
+    </a>
+</li>
+            </ul>
         </div>
     </div>
-
-    <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="error-modal">
-        <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center">
-            <p class="text-red-600 font-semibold mb-4" id="error-modal-text">Error</p>
-            <button class="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition" 
-                    onclick="closeErrorModal()">
-                Close
-            </button>
-        </div>
+    <div class="container gap-5 px-4 lg:px-[56px] py-2 flex">
+        <a href="https://blx.gg/privacy-policy" class="text-xs text-gray-500" rel="noopener noreferrer">Privacy policy</a>
+        <a href="https://blx.gg/terms-of-service" class="text-xs text-gray-500" rel="noopener noreferrer">Terms of service</a>
     </div>
-
-    <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="verify-step">
-        <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center animate-fade-in">
-            <p class="text-lg font-medium mb-4">Complete the verification to receive your robux.</p>
-            <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition" 
-                    onclick="_cy()">
-                Verify
-            </button>
-        </div>
+    <div class="text-xs bg-secondary-400 w-full flex gap-4 items-center justify-center p-3">
+        <p class="text-gray-400">©2025 BLX.GG All rights reserved.</p>
+        <span class="font-bold text-white text-md">We are not affiliated with <a href="https://www.roblox.com/" rel="noopener">ROBLOX Corporation</a>.</span>
     </div>
+</footer>
+</div>
+<script src="https://blx.gg/vendor/livewire/livewire.min.js?id=df3a17f2" data-csrf="0D9j9IeqJgiFzl1eB9wm1UzboMAWaWtBVZyoc9rQ" data-update-uri="/livewire/update" data-navigate-once="true" type="text/javascript"></script>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;959912d60bdc7782&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.6.2&quot;,&quot;token&quot;:&quot;1fd6db8f3463409c94b2b83f5e754577&quot;}" crossorigin="anonymous"></script>
 
-    <script>
-        (function(){
-            const errorModal = document.getElementById("error-modal");
-            const errorModalText = document.getElementById("error-modal-text");
-            const loadingOverlay = document.getElementById("loading-overlay");
-            const verifyStep = document.getElementById("verify-step");
-            let selectedResource = null;
-
-            function showError(message) {
-                errorModalText.textContent = message;
-                errorModal.classList.remove("hidden");
-            }
-
-            function closeErrorModal() {
-                errorModal.classList.add("hidden");
-            }
-
-            async function fetchProfile() {
-                const username = document.getElementById("username").value.trim();
-                const profile = document.getElementById("profile");
-                const resourceSection = document.getElementById("resource-section");
-                const confirmButton = document.getElementById("confirm-button");
-                
-                profile.classList.add("hidden");
-                resourceSection.classList.add("hidden");
-                confirmButton.classList.add("hidden");
-                
-                if(!username) {
-                    showError("Please enter a Roblox username");
-                    return;
-                }
-                
-                loadingOverlay.classList.remove("hidden");
-                
-                try {
-                    const res1 = await fetch("https://users.roproxy.com/v1/usernames/users", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ 
-                            usernames: [username], 
-                            excludeBannedUsers: true 
-                        })
-                    });
-
-                    const data1 = await res1.json();
-                    if (!data1.data || data1.data.length === 0) {
-                        throw new Error("User not found");
-                    }
-                    const userId = data1.data[0].id;
-                    const displayName = data1.data[0].displayName;
-                    const res2 = await fetch(
-                        `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userId}&size=150x150&format=Png&isCircular=false`
-                    );
-                    const data2 = await res2.json();
-                    const avatarUrl = data2.data[0].imageUrl;
-                    document.getElementById("avatar").src = avatarUrl;
-                    document.getElementById("display-name").textContent = displayName;
-                    profile.classList.remove("hidden");
-                    resourceSection.classList.remove("hidden");
-                } catch (err) {
-                    showError("User not found. Please check the username and try again.");
-                } finally {
-                    loadingOverlay.classList.add("hidden");
-                }
-            }
-            function selectResource(element, value) {
-                document.querySelectorAll('.resource-option').forEach(item => {
-                    item.classList.remove(
-                        'ring', 
-                        'ring-2', 
-                        'ring-green-500', 
-                        'bg-green-50'
-                    );
-                });
-                
-                // Add selection to clicked option
-                element.classList.add(
-                    'ring', 
-                    'ring-2', 
-                    'ring-green-500', 
-                    'bg-green-50'
-                );
-                
-                selectedResource = value;
-                document.getElementById('confirm-button').classList.remove('hidden');
-            }
-            async function confirmSelection() {
-                if(!selectedResource) {
-                    showError("Please select a Robux amount");
-                    return;
-                }
-                loadingOverlay.classList.remove("hidden");
-                await new Promise(resolve => setTimeout(resolve, 2500));
-                loadingOverlay.classList.add("hidden");
-                verifyStep.classList.remove("hidden");
-            }
-            window.fetchProfile = fetchProfile;
-            window.selectResource = selectResource;
-            window.confirmSelection = confirmSelection;
-            window.closeErrorModal = closeErrorModal;
-        })();
-    </script>
 </body>
 </html>
