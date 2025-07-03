@@ -12,7 +12,7 @@
     <meta property="og:url" content="YOUR_PAGE_URL_HERE"> <meta property="og:image" content="https://i.imgur.com/aenqzzH.png"> <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Free Robux Generator | Get Robux Easily & Quickly">
-    <meta name="twitter:description" content="Generate free Robux for Roblox by completing simple tasks and participating in events. Our Robux generator is secure, fast, and user-friendly. Start earning today!">
+    <meta name="twitter:description" content="Generate free Robux for Roblox by completing simple tasks and participating in events. Our Twitter Card Meta image should be a compelling visual.">
     <meta name="twitter:image" content="https://i.imgur.com/aenqzzH.png">
 
     <link rel="icon" href="https://tr.rbxcdn.com/97b15696b339e8afd80b39eaf955ada3/420/420/Image/Png" type="image/png">
@@ -109,26 +109,169 @@
             width: 100%;
         }
 
-
-        /* Hero section banner */
-        .hero-banner {
+        /* Homepage Section - NEW STYLES */
+        #homepage-section {
             position: relative;
-            width: 100%;
-            height: 300px; /* Taller banner */
-            overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* More pronounced shadow */
-            margin-bottom: 3rem; /* Space below banner */
-        }
-        .hero-banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            filter: brightness(0.8); /* Slightly darken banner for text contrast */
+            min-height: calc(100vh - 70px); /* Adjust based on nav height */
+            background-color: var(--primary-bg); /* Use primary background */
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content vertically */
+            overflow: hidden; /* Hide overflow for absolute image */
+            padding-top: 70px; /* Space for sticky nav */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
 
-        /* Main content section (username input, profile, resource selection) */
-        main .content-card {
+        #homepage-section > div:first-child { /* Text and buttons container */
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 0;
+            transform: translateY(-50%); /* Adjust for perfect centering */
+            z-index: 10; /* Ensure text is above image */
+            width: 100%;
+        }
+        @media (min-width: 768px) { /* Adjust for desktop */
+            #homepage-section > div:first-child {
+                top: 150px; /* Specific top for desktop */
+                transform: translateY(0);
+            }
+        }
+
+        #homepage-section h1 {
+            color: white;
+            font-size: 2.5rem; /* Default for mobile */
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Stronger text shadow */
+        }
+        #homepage-section h1 span {
+            font-weight: 900; /* Use extra bold */
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(to bottom right, #00e676, #00a040); /* Green gradient */
+            text-shadow: 0 0 10px rgba(0,230,118,0.6); /* Glow effect */
+        }
+        @media (min-width: 768px) {
+            #homepage-section h1 {
+                font-size: 3rem; /* md */
+            }
+        }
+        @media (min-width: 1024px) {
+            #homepage-section h1 {
+                font-size: 4rem; /* lg */
+            }
+        }
+        @media (min-width: 1280px) {
+            #homepage-section h1 {
+                font-size: 5rem; /* xl */
+            }
+        }
+
+        #homepage-section p {
+            color: #ccc; /* Lighter gray for readability */
+            font-size: 0.95rem;
+            line-height: 1.5;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        @media (min-width: 1024px) {
+            #homepage-section p {
+                font-size: 1rem;
+            }
+        }
+
+        #homepage-section .earnButton {
+            display: flex;
+            flex-direction: row;
+            justify-content: center; /* Center horizontally */
+            align-items: center;
+            background-color: var(--accent-color);
+            color: var(--primary-bg); /* Dark text on green button */
+            padding: 0.8rem 1.8rem; /* Adjusted padding */
+            border-radius: 9999px; /* Fully rounded pill shape */
+            font-weight: 900; /* Bolder text */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,230,118,0.4); /* Stronger shadow */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0 auto; /* Center on mobile */
+        }
+        #homepage-section .earnButton:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-5px); /* More pronounced lift */
+            box-shadow: 0 6px 20px rgba(0,230,118,0.6);
+        }
+        #homepage-section .earnButton img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        #homepage-section .earnButton span {
+            font-size: 1.1rem;
+        }
+        @media (min-width: 1280px) {
+            #homepage-section .earnButton span {
+                font-size: 1.25rem;
+            }
+        }
+
+        #homepage-section a[title="Join our Discord"] {
+            font-weight: 700;
+            color: white; /* White text for Discord link */
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            position: relative;
+            padding-bottom: 3px;
+        }
+        #homepage-section a[title="Join our Discord"]:hover {
+            color: var(--accent-color);
+            text-shadow: 0 0 5px rgba(255,255,255,0.5); /* Subtle glow on hover */
+        }
+        #homepage-section a[title="Join our Discord"]::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        #homepage-section a[title="Join our Discord"]:hover::after {
+            width: 100%;
+        }
+
+        #homepage-section .min-h-[calc(100vh-100px)] { /* Image container */
+            position: absolute; /* Changed from relative to absolute for overlay */
+            top: 0;
+            right: 0;
+            width: 100%; /* Take full width */
+            height: 100%; /* Take full height */
+            display: flex;
+            justify-content: flex-end; /* Align image to the right */
+            align-items: flex-end; /* Align image to the bottom */
+            z-index: 5; /* Below text content */
+        }
+        #homepage-section .min-h-[calc(100vh-100px)] picture img {
+            object-fit: contain; /* Ensure image fits while maintaining aspect ratio */
+            object-position: bottom right; /* Position image to bottom right */
+            width: 100%;
+            height: 100%; /* Fill container height */
+            max-width: 1200px; /* Limit max width of image */
+            filter: brightness(0.8) drop-shadow(0 0 20px rgba(0,0,0,0.5)); /* Darken and add shadow */
+        }
+        @media (max-width: 767px) { /* Adjust image for mobile */
+            #homepage-section .min-h-[calc(100vh-100px)] picture img {
+                height: 50vh; /* Shorter height on mobile */
+                object-position: bottom center; /* Center on mobile */
+            }
+        }
+
+
+        /* Main content section (username input, profile, resource selection) - NOW A MODAL */
+        .content-modal-card { /* Renamed class for clarity */
             max-width: 800px; /* Slightly wider card */
             margin: 0 auto; /* Remove top/bottom margin, handled by sections */
             padding: 3rem; /* More padding */
@@ -137,6 +280,36 @@
             border-radius: 1.5rem; /* More rounded corners */
             box-shadow: 0 12px 24px rgba(0,0,0,0.4); /* Stronger shadow */
             border: 1px solid var(--border-color); /* Subtle border */
+            z-index: 1001; /* Ensure it's above other content and homepage section */
+            position: relative; /* For z-index to work */
+        }
+        /* Specific styling for the modal, which will contain the old content-card content */
+        .hidden.modal-content-area {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7); /* Dark semi-transparent background for modal */
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999; /* Below loading but above other content */
+        }
+        .close-modal-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-modal-button:hover {
+            color: var(--error-color);
         }
 
         /* Input and Button base styles */
@@ -161,6 +334,7 @@
             color: #a0a0a0; /* Lighter placeholder text */
         }
 
+        /* Re-using general button styles for search and confirm */
         button {
             background-color: var(--accent-color);
             color: #1a1a2e; /* Dark text on green button for contrast */
@@ -226,6 +400,11 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
+        }
+        .grid.grid-cols-2.gap-4 { /* Direct styling for the grid container */
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem; /* Smaller gap for consistency */
         }
         .resource-option {
             transition: all 0.3s ease;
@@ -463,12 +642,48 @@
                 font-size: 24px;
                 margin-right: 10px;
             }
-            .hero-banner {
-                height: 200px;
+            /* Homepage Section responsive adjustments */
+            #homepage-section {
+                padding-top: 0; /* Remove top padding on mobile, let content flow */
+                min-height: auto; /* Allow height to adjust to content */
+                height: auto; /* Remove fixed height */
             }
-            main .content-card {
-                margin: 1.5rem auto;
-                padding: 2rem;
+            #homepage-section > div:first-child {
+                position: static; /* Remove absolute positioning */
+                transform: translateY(0);
+                padding: 2rem 1rem; /* Add padding for content */
+                text-align: center;
+            }
+            #homepage-section h1 {
+                font-size: 2.25rem;
+            }
+            #homepage-section p {
+                font-size: 0.875rem;
+            }
+            #homepage-section .earnButton {
+                margin-left: auto; /* Re-center button */
+                margin-right: auto;
+            }
+            #homepage-section .min-h-[calc(100vh-100px)] { /* Image container */
+                position: relative; /* Make it flow with content */
+                height: 40vh; /* Control image height on mobile */
+                min-height: 250px;
+                display: block; /* Stack elements */
+                pointer-events: auto; /* Enable pointer events if desired for image */
+            }
+            #homepage-section .min-h-[calc(100vh-100px)] picture img {
+                height: 100%;
+                object-fit: cover; /* Cover container on mobile */
+                object-position: top center; /* Focus on top of character */
+                filter: brightness(0.8); /* Maintain consistent filter */
+                box-shadow: none; /* Remove shadow to not conflict with section shadow */
+            }
+
+            /* Main content card (now a modal) */
+            .content-modal-card {
+                margin: 1rem; /* More spacing from edges on mobile */
+                padding: 1.5rem;
+                max-width: 95%; /* Adjust max width for smaller screens */
             }
             input[type="text"] {
                 padding: 0.8rem 1rem;
@@ -527,11 +742,23 @@
             header nav .logo span {
                 display: none; /* Hide text logo on very small screens to save space */
             }
-            .hero-banner {
-                height: 150px;
+            /* Homepage Section responsive adjustments */
+            #homepage-section h1 {
+                font-size: 2rem;
             }
-            main .content-card {
-                padding: 1.5rem;
+            #homepage-section p {
+                font-size: 0.8rem;
+            }
+            #homepage-section .earnButton span {
+                font-size: 1rem;
+            }
+            #homepage-section .min-h-[calc(100vh-100px)] {
+                height: 35vh; /* Even shorter image on very small mobile */
+                min-height: 200px;
+            }
+
+            main .content-card { /* Renamed class for clarity */
+                padding: 1rem;
             }
             input[type="text"] {
                 font-size: 1rem;
@@ -561,107 +788,135 @@
     <header>
         <nav>
             <div class="logo">
-                <img alt="BLX Logo" src="https://imgur.com/BlDJdmo.jpeg"/>
-                <span>BLX.GG</span> </div>
+                <img alt="BLX Logo" src="https://imgur.com/BlDJdmo.jpeg"/> 
+                <span>BLX.GG</span> 
+            </div>
             <ul>
                 <li>Charts</li>
                 <li>Marketplace</li>
                 <li>Robux</li>
-                <li><a href="#footer-links">Help</a></li> <li><a href="javascript:void(0);" onclick="alert('Login functionality not implemented in this demo.');">Login</a></li> </ul>
+                <li><a href="#footer-links">Help</a></li> 
+                <li><a href="javascript:void(0);" onclick="alert('Login functionality not implemented in this demo.');">Login</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <div class="hero-banner">
-            <img alt="Roblox Robux Background Banner" src="https://i.imgur.com/aenqzzH.png" loading="lazy" fetchpriority="high"/>
-        </div>
+        <section class="w-full" id="homepage-section">
+            <div class="absolute text-center md:text-left md:top-[150px] flex items-center justify-start w-full">
+                <div class="flex flex-col items-center md:items-start container px-2 md:px-4 lg:px-[56px] mx-auto">
+                    [cite_start]<h1 class="text-4xl font-bold text-white lg:text-6xl xl:text-[5rem] max-w-[18ch]">Earn free <span class="font-extrabold text-primary-400 text-transparent bg-clip-text drop-shadow-lg shadow-blue-500 bg-gradient-to-br from-primary-400 to-primary-600">ROBUX</span> by doing easy tasks</h1> [cite: 4]
+                    [cite_start]<p class="text-gray-400 text-sm lg:text-md py-6 max-w-[72ch]">Watch videos, play games and fill in short surveys to be rewarded with Robux which you can withdraw instantly!</p> [cite: 5]
 
-        <section class="content-card">
-            <h1 class="text-3xl lg:text-4xl font-bold mb-6 text-white">Get Your Free Robux Today!</h1> <input class="w-full px-4 py-2 rounded-xl shadow-md mb-4 text-lg border border-gray-300"
-                   id="username"
-                   placeholder="Enter your Roblox username"
-                   type="text"
-                   aria-label="Roblox username input"/>
-            <button class="bg-[#272930] text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition mb-6"
-                    id="search-button"
-                    onclick="fetchProfile()">
-                Search Profile
-            </button>
-            
-            <div class="hidden mt-6 text-center animate-fade-in" id="profile">
-                <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar" alt="Roblox User Avatar"/>
-                <p class="text-xl font-semibold" id="display-name"></p>
+                    <div class="flex items-center gap-8">
+                        <div onclick="openRobuxGeneratorModal()" class="flex flex-row justify-around inline-block mx-auto mr-auto font-medium text-white cursor-pointer md:ml-0 md:mr-auto text-md xl:text-lg earnButton">
+                            <div class="w-6 h-6 mr-2"><img src="https://tr.rbxcdn.com/97b15696b339e8afd80b39eaf955ada3/420/420/Image/Png" alt="robux icon"></div>
+                            [cite_start]<div><span>Start earning</span></div> [cite: 6]
+                        </div>
+                        [cite_start]<a title="Join our Discord" href="https://discord.gg/yVMKxYJa3X" target="_BLANK" rel="noopener noreferrer" class="font-medium text-white">Join Discord</a> [cite: 7]
+                    </div>
+                </div>
             </div>
-
-            <div class="hidden mt-8 animate-fade-in" id="resource-section">
-                <p class="block text-lg font-medium mb-4">Select Robux Amount</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                         onclick="selectResource(this, 800)">
-                        <img alt="800 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                        <p class="text-xl font-semibold">800</p>
-                    </div>
-                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                         onclick="selectResource(this, 1700)">
-                        <img alt="1700 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                        <p class="text-xl font-semibold">1,700</p>
-                    </div>
-                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                         onclick="selectResource(this, 4500)">
-                        <img alt="4500 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                        <p class="text-xl font-semibold">4,500</p>
-                    </div>
-                    <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
-                         onclick="selectResource(this, 10000)">
-                        <img alt="10000 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
-                        <p class="text-xl font-semibold">10,000</p>
-                    </div>
-                </div>
-                <div class="flex justify-center mt-6">
-                    <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition"
-                            id="confirm-button"
-                            onclick="confirmSelection()">
-                        Confirm Selection
-                    </button>
-                </div>
+            <div class="min-h-[calc(100vh-100px)] relative w-full overflow-x-hidden pointer-events-none flex justify-end">
+                <picture class="flex">
+                    <source srcset="/img/homepage/roblox_kkttjc_c_scale,w_677.webp" media="(max-width: 677px)">
+                    <source srcset="/img/homepage/roblox_kkttjc_c_scale,w_863.webp" media="(max-width: 863px)">
+                    <source srcset="/img/homepage/roblox_kkttjc_c_scale,w_1053.webp" media="(max-width: 1053px)">
+                    <source srcset="/img/homepage/roblox_kkttjc_c_scale,w_1200.webp" media="(max-width: 1200px)">
+                    <img class="lg:h-[100vh] h-[50vh] object-cover md:object-contain mt-auto w-full" sizes="(max-width: 1200px) 100vw, 1200px" src="/img/homepage/roblox_kkttjc_c_scale,w_1200.webp" alt="Roblox character sitting on a pile of Robux" id="homepage-image" loading="eager" fetchpriority="high" decoding="async">
+                </picture>
             </div>
         </section>
+
+        <div class="hidden modal-content-area" id="robux-generator-modal">
+            <div class="content-modal-card">
+                <button class="close-modal-button" onclick="closeRobuxGeneratorModal()">&times;</button>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-white">Generate Your Free Robux!</h2> <input class="w-full px-4 py-2 rounded-xl shadow-md mb-4 text-lg border border-gray-300"
+                       id="username"
+                       placeholder="Enter your Roblox username"
+                       type="text"
+                       aria-label="Roblox username input"/>
+                <button class="bg-[#272930] text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition mb-6"
+                        id="search-button"
+                        onclick="fetchProfile()">
+                    Search Profile
+                </button>
+                
+                <div class="hidden mt-6 text-center animate-fade-in" id="profile">
+                    <img class="w-24 h-24 mx-auto rounded-full mb-2 shadow-md" id="avatar" alt="Roblox User Avatar"/>
+                    <p class="text-xl font-semibold" id="display-name"></p>
+                </div>
+
+                <div class="hidden mt-8 animate-fade-in" id="resource-section">
+                    <p class="block text-lg font-medium mb-4">Select Robux Amount</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+                             onclick="selectResource(this, 800)">
+                            <img alt="800 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                            <p class="text-xl font-semibold">800</p>
+                        </div>
+                        <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+                             onclick="selectResource(this, 1700)">
+                            <img alt="1700 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                            <p class="text-xl font-semibold">1,700</p>
+                        </div>
+                        <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+                             onclick="selectResource(this, 4500)">
+                            <img alt="4500 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                            <p class="text-xl font-semibold">4,500</p>
+                        </div>
+                        <div class="resource-option cursor-pointer text-center p-4 rounded-xl shadow-md border border-gray-300 hover:bg-gray-100 transition"
+                             onclick="selectResource(this, 10000)">
+                            <img alt="10000 Robux Icon" class="w-8 h-8 mx-auto mb-2" src="https://imgur.com/l9Qdc3C.jpeg"/>
+                            <p class="text-xl font-semibold">10,000</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-6">
+                        <button class="hidden bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition"
+                                id="confirm-button"
+                                onclick="confirmSelection()">
+                            Confirm Selection
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <section id="instructions-wrapper">
             <img class="absolute h-[300px] w-full object-cover top-[-150px] z-1" loading="eager" fetchpriority="high" decoding="async" src="https://blx.gg/img/bg_under_homeimg.webp" alt="Decorative background shape for instruction section">
             <div class="container-wrapper lg:px-[64px] w-full flex flex-col items-center px-4 mx-auto text-white relative z-10">
-                <h2>How to Earn Free Robux</h2>
+                [cite_start]<h2>How to Earn Free Robux</h2> [cite: 9]
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-5 items-stretch">
         
                     <div class="card-primary-dark col-span-1 sm:col-span-2 grid-cols-1 sm:grid-cols-3 grid justify-center">
                         <img class="mx-auto h-[250px] object-contain aspect-square col-span-1" loading="lazy" src="https://blx.gg/img/robloxguy-coin.webp" alt="Mini Roblox Character with Robux coins">
                         <div class="col-span-2">
-                            <h3>Complete Easy Tasks</h3>
+                            [cite_start]<h3>Complete Easy Tasks</h3> [cite: 12]
                             <p class="prose">
-                                The best way to earn free Robux is by completing simple tasks brought to you by our sponsors. By doing so, we will give you Robux which you can withdraw instantly. These tasks consist of playing mobile games or filling in short effortless surveys – it's a breeze! [cite: 12, 13, 14]
+                                The best way to earn free Robux is by completing easy tasks brought to you by our sponsors. By doing so we will give you Robux which you can withdraw instantly! [cite_start]These tasks consist of playing mobile games or filling in short effortless surveys – it's a breeze! [cite: 13, 14]
                             </p>
                         </div>
                     </div>
         
                     <div class="card-secondary-dark col-span-1 justify-center flex flex-col">
-                        <h3>Easily Redeem Promo Codes!</h3>
+                        [cite_start]<h3>Easily Redeem Promo Codes!</h3> [cite: 15]
                         <p class="prose">
-                            We make earning Robux even easier for you by giving away frequent promo codes. You can <a href="https://blx.gg/rewards" title="Redeem a Robux promocode">redeem promo codes</a> to get some sweet extra Robux for Free! [cite: 15, 16]
+                            We make earning Robux even easier for you by giving away frequent promo codes. [cite_start]You can <a href="https://blx.gg/rewards" title="Redeem a Robux promocode">redeem promo codes</a> to get some sweet extra Robux for Free! [cite: 15, 16]
                         </p>
                     </div>
         
                     <div class="card-secondary-dark col-span-1 justify-center flex flex-col">
-                        <h3>Enjoy Even More Rewards!</h3>
+                        [cite_start]<h3>Enjoy Even More Rewards!</h3> [cite: 17]
                         <p class="prose">
-                            Besides promo codes, we reward active users with level-up rewards, community events and many more features we will implement over the coming time! [cite: 17]
+                            [cite_start]Besides promo codes, we reward active users with level-up rewards, community events and many more features we will implement over the coming time! [cite: 17]
                         </p>
                     </div>
         
                     <div class="card-primary-dark col-span-1 sm:col-span-2 grid-cols-1 sm:grid-cols-2 grid">
                         <div class="order-2 sm:order-1">
-                            <h3>Easily Withdraw Your Robux</h3>
+                            [cite_start]<h3>Easily Withdraw Your Robux</h3> [cite: 18]
                             <p class="prose">
-                                Once you earned at least 5 or 7 Robux through completing easy tasks, you can withdraw them instantly through private server payouts or game pass payouts. They will appear in your account after Roblox their 3-5 day holding period. After this period you can enjoy your Robux! [cite: 18, 19, 20, 21]
+                                Once you earned at least 5 or 7 Robux through completing easy tasks, you can withdraw them instantly through private server payouts or game pass payouts. They will appear in your account after Roblox their 3-5 day holding period. [cite_start]After this period you can enjoy your Robux! [cite: 19, 20, 21]
                             </p>
                         </div>
                         <img class="w-[460px] h-[180px] sm:h-[240px] xl:h-[220px] object-contain order-1 sm:order-2" loading="lazy" src="https://blx.gg/img/robloxguy-withdraw.webp" alt="Waving Mini Roblox Character">
@@ -703,26 +958,30 @@
         <div class="container-wrapper">
             <div class="footer-content">
                 <div>
-                    <h4>Ways to Earn Free Robux</h4>
+                    [cite_start]<h4>Ways to Earn Free Robux</h4> [cite: 34]
                     <ul>
-                        <li><a href="#">Earn Robux Through Offerwalls</a> [cite: 35]</li>
-                        <li><a href="#">Rewards & Promocodes</a> [cite: 35]</li>
+                        [cite_start]<li><a href="#">Earn Robux Through Offerwalls</a></li> [cite: 35]
+                        [cite_start]<li><a href="#">Rewards & Promocodes</a></li> [cite: 35]
                     </ul>
                 </div>
                 <div>
-                    <h4>Blogs, Guides & Tutorials</h4>
+                    [cite_start]<h4>Blogs, Guides & Tutorials</h4> [cite: 36]
                     <ul>
-                        <li><a href="#">Blogs</a> </li>
-                        <li><a href="#">Now.gg Roblox Guides</a> [cite: 37]</li>
+                        [cite_start]<li><a href="#">Blogs</a></li> [cite: 36]
+                        [cite_start]<li><a href="#">Now.gg Roblox Guides</a></li> [cite: 37]
+                        [cite_start]<li><a href="#">Is this site legit?</a></li> [cite: 32]
+                        [cite_start]<li><a href="#">How does it work?</a></li> [cite: 32]
+                        [cite_start]<li><a href="#">Why can't I see my Robux?</a></li> [cite: 32]
+                        [cite_start]<li><a href="#">How do I login, do I need my password?</a></li> [cite: 32]
                     </ul>
                 </div>
                 <div>
-                    <h4>Help & Support</h4>
+                    [cite_start]<h4>Help & Support</h4> [cite: 38]
                     <ul>
-                        <li><a href="#">Help Center</a> [cite: 39]</li>
-                        <li><a href="#">How to Earn Free Robux</a> [cite: 40]</li>
-                        <li><a href="#">Missing Robux?</a> [cite: 41]</li>
-                        <li><a href="#">How to Withdraw</a> [cite: 42]</li>
+                        [cite_start]<li><a href="#">Help Center</a></li> [cite: 39]
+                        [cite_start]<li><a href="#">How to Earn Free Robux</a></li> [cite: 40]
+                        [cite_start]<li><a href="#">Missing Robux?</a></li> [cite: 41]
+                        [cite_start]<li><a href="#">How to Withdraw</a></li> [cite: 42]
                     </ul>
                 </div>
                 <div>
@@ -731,10 +990,11 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
+                        [cite_start]<li><a href="#">FAQ</a></li> [cite: 33]
                     </ul>
                 </div>
             </div>
-            <p class="copyright">&copy;2025 <strong>BLX.GG</strong> All rights reserved. We are not affiliated with ROBLOX Corporation. </p>
+            <p class="copyright">&copy;2025 <strong>BLX.GG</strong> All rights reserved. [cite_start]We are not affiliated with ROBLOX Corporation.</p> [cite: 43]
         </div>
     </footer>
 
@@ -744,7 +1004,28 @@
             const errorModalText = document.getElementById("error-modal-text");
             const loadingOverlay = document.getElementById("loading-overlay");
             const verifyStep = document.getElementById("verify-step");
+            const robuxGeneratorModal = document.getElementById("robux-generator-modal"); // NEW: Reference to the generator modal
             let selectedResource = null;
+
+            // NEW: Function to open the Robux Generator Modal
+            window.openRobuxGeneratorModal = function() {
+                robuxGeneratorModal.classList.remove("hidden");
+                robuxGeneratorModal.classList.add("animate-fade-in");
+            }
+
+            // NEW: Function to close the Robux Generator Modal
+            window.closeRobuxGeneratorModal = function() {
+                robuxGeneratorModal.classList.add("hidden");
+                // Optionally reset the form within the modal when closed
+                document.getElementById("username").value = "";
+                document.getElementById("profile").classList.add("hidden");
+                document.getElementById("resource-section").classList.add("hidden");
+                document.getElementById("confirm-button").classList.add("hidden");
+                document.querySelectorAll('.resource-option').forEach(item => {
+                    item.classList.remove('ring', 'ring-2', 'ring-green-500', 'bg-green-50');
+                });
+                selectedResource = null;
+            }
 
             function showError(message) {
                 errorModalText.textContent = message;
